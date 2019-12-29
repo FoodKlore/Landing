@@ -6,59 +6,19 @@ const Navigation = () => (
   <nav>
     <LinksWrapper>
       <li>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Home
-        </Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Why us?
-        </Link>
+        <Link to="/">Why us?</Link>
       </li>
       <li>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          How it works
-        </Link>
+        <Link to="/">How it works</Link>
       </li>
       <li>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Foddies
-        </Link>
+        <Link to="/">Foddies</Link>
       </li>
       <li>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Download App
-        </Link>
+        <Link to="/">Download App</Link>
       </li>
     </LinksWrapper>
   </nav>
@@ -71,8 +31,18 @@ const LinksWrapper = styled.ul`
   }
   li {
     list-style: none;
-    padding: 2%;
-    box-sizing: border-box;
+    padding: 0% 5% 0% 5%;
+    a {
+      white-space: nowrap;
+      /* margin-top: 2px; */
+      color: white;
+      text-decoration: none;
+      &:hover {
+        border-bottom: 2px solid #e83b54;
+        padding-bottom: 14px;
+        box-sizing: border-box;
+      }
+    }
   }
 `
 

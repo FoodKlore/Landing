@@ -6,7 +6,7 @@ import Navigation from "./navigation"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#69BC8B`,
       marginBottom: `1.45rem`,
     }}
   >
