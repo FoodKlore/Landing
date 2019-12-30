@@ -7,15 +7,14 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#69BC8B`,
-      marginBottom: `1.45rem`,
     }}
   >
     <div style={styles.navBar}>
       <figure style={styles.logoWrapper}>
-        <img
+        {/* <img
           style={styles.logo}
           src="https://bccic.ca/wp-content/uploads/2016/12/example-logo-660x330.png"
-        />
+        /> */}
       </figure>
       <Navigation />
     </div>
@@ -34,7 +33,6 @@ const styles = {
   },
   logoWrapper: {
     display: "flex",
-    alignItems: "center",
   },
 }
 
