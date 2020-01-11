@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Navigation from "./navigation"
+import FoodKloreLogo from "./foodKloreLogo"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,10 +12,7 @@ const Header = ({ siteTitle }) => (
   >
     <div style={styles.navBar}>
       <figure style={styles.logoWrapper}>
-        {/* <img
-          style={styles.logo}
-          src="https://bccic.ca/wp-content/uploads/2016/12/example-logo-660x330.png"
-        /> */}
+        <FoodKloreLogo />
       </figure>
       <Navigation />
     </div>
