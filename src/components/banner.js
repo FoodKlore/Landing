@@ -1,21 +1,31 @@
 import React from "react"
 import styled from "styled-components"
 import BannerImage from "./bannerImage"
+import { H1, P } from "./global/"
 
 const Banner = () => (
   <MainSection
     style={{
-      background: `#69bc8b url(${BannerImage()}) no-repeat center`,
+      backgroundImage: `url(${BannerImage().background1}), url(${
+        BannerImage().background2
+      }), url(${BannerImage().background3})`,
+      backgroundColor: "#69bc8b",
+      backgroundRepeat: "no-repeat, no-repeat",
+      backgroundPositionX: "right, left, 30px",
+      backgroundPositionY: "bottom, bottom, -100px",
+      backgroundSize: "80%, 35%",
       padding: "5%",
       width: "100%",
+      height: "610px",
+      objectFit: "contain",
     }}
   >
     <div>
-      <h1> Enjoy a world </h1> <h2> culture flavors around you </h2>
-      <p>
+      <H1> Enjoy a world </H1> <h2> culture flavors around you </h2>
+      <P>
         Find that place who has the same test you were looking for and share the
         best of cuisines with your friends
-      </p>
+      </P>
       <section>
         <button> Play store </button> <button> apple sttore </button>
       </section>
