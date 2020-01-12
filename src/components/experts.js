@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import ExpertsSectionBackground from "./expertBackgroundImage"
+import AndroidDownloadImage from "src/images/AndroidBadgeBanner.svg"
+import iOSDownloadImage from "src/images/iOsBadgeBanner.svg"
 
 const Experts = () => (
   <ExpertsSection
@@ -37,8 +39,20 @@ const Experts = () => (
           justifyContent: "center",
         }}
       >
-        <button>android</button>
-        <button>iOS</button>
+        <a
+          href="https://example.com"
+          target="_blank"
+          style={{ marginRight: "15px" }}
+        >
+          <img src={AndroidDownloadImage}></img>
+        </a>
+        <a
+          href="https://example.com"
+          target="_blank"
+          style={{ padding: "9px 0" }}
+        >
+          <img src={iOSDownloadImage}></img>
+        </a>
       </div>
     </div>
   </ExpertsSection>
