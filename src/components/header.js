@@ -28,8 +28,9 @@ const styles = {
   },
   navBar: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     alignItems: "center",
+    padding: "0% 5% 0% 5%",
     width: "100%",
   },
   logoWrapper: {

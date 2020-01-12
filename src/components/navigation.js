@@ -3,47 +3,31 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Navigation = () => (
-  <nav>
+  <nav
+    style={{
+      display: "flex",
+      flex: 1,
+      justifyContent: "flex-end",
+    }}
+  >
     <LinksWrapper>
-      <div id="linksInnerWrapper">
-        <li
-          style={{
-            padding: "0% 8% 0% 8%",
-          }}
-        >
-          <Link to="/">Home</Link>
-        </li>
-        <li
-          style={{
-            padding: "0% 8% 0% 8%",
-          }}
-        >
-          <Link to="/">Why us?</Link>
-        </li>
-        <li
-          style={{
-            padding: "0% 8% 0% 8%",
-          }}
-        >
-          <Link to="/">How it works</Link>
-        </li>
-        <li
-          style={{
-            padding: "0% 8% 0% 8%",
-          }}
-        >
-          <Link to="/">Foddies</Link>
-        </li>
-        <li
-          style={{
-            padding: "0% 8% 0% 8%",
-          }}
-        >
-          <button>
-            <span> Download App </span>
-          </button>
-        </li>
-      </div>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/">Why us?</Link>
+      </li>
+      <li>
+        <Link to="/">How it works</Link>
+      </li>
+      <li>
+        <Link to="/">Foddies</Link>
+      </li>
+      <li>
+        <button>
+          <span> Download App </span>
+        </button>
+      </li>
     </LinksWrapper>
   </nav>
 )
@@ -53,10 +37,8 @@ const LinksWrapper = styled.ul`
     display: flex;
     justify-content: space-evenly;
     margin: 0;
-  }
-  #linksInnerWrapper {
-    display: flex;
     align-items: center;
+    flex: 1;
     li {
       list-style: none;
       * {
