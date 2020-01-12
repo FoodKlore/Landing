@@ -497,14 +497,15 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  /* margin-bottom: calc(1.45rem / 2); */
 }
 ol li {
   padding-left: 0;
 }
 ul li {
-  padding-left: 0;
+  /* padding: 0% 8% 0% 8%; */
 }
+
 li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
