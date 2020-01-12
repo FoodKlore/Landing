@@ -5,9 +5,7 @@ import styled from "styled-components"
 const Navigation = () => (
   <nav
     style={{
-      display: "flex",
-      flex: 1,
-      justifyContent: "flex-end",
+      width: "50%",
     }}
   >
     <LinksWrapper>
@@ -35,10 +33,9 @@ const Navigation = () => (
 const LinksWrapper = styled.ul`
   & {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0;
     align-items: center;
-    flex: 1;
     li {
       list-style: none;
       * {
@@ -48,9 +45,9 @@ const LinksWrapper = styled.ul`
         color: white;
         text-decoration: none;
         &:hover {
-          /* border-bottom: 2px solid #e83b54; */
-          /* padding-bottom: 14px; */
-          /* box-sizing: border-box; */
+          border-bottom: 2px solid #e83b54;
+          padding-bottom: 14px;
+          box-sizing: border-box;
         }
       }
       button {
