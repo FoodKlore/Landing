@@ -1,54 +1,109 @@
 import React from "react"
 import styled from "styled-components"
 import ShowCaseItem from "./showcaseItem"
+import { H2, P } from "./global/index"
+import showCaseImages from "./showCaseImages"
 
 const ShowCase = () => (
-  <section>
-    <div>
-      <h2> Every culture near to you </h2>
-      <p> A new era of discoveries you can share</p>
-    </div>
-    <ShowCaseItemWrapper>
-      <ShowCaseItem
-        title="In your area"
-        img="https://s3.amazonaws.com/FringeBucket/image_placeholder.png"
+  <ShowCaseContainer>
+    <ShowCaseTitleWrapper>
+      <H2> Every culture near to you </H2>
+      <P
+        width="489px"
+        height="22px"
+        fontsize="16px"
+        // line-height: 1.19;
+        margintop="2px"
+        color="#9292af"
       >
-        <p>
+        A new era of discoveries you can share
+      </P>
+    </ShowCaseTitleWrapper>
+    <ShowCaseItemWrapper>
+      <ShowCaseItem title="In your area" img={showCaseImages().inYourArea}>
+        <P
+          width="242px"
+          color="#3b3b3b"
+          fontsize="11px"
+          height="52px"
+          margintop="24px"
+        >
           From the palm of your hand you can discover a rich network of folklore
           flavors you don't know YET
-        </p>
+        </P>
       </ShowCaseItem>
       <ShowCaseItem
         title="New culture food"
-        img="https://s3.amazonaws.com/FringeBucket/image_placeholder.png"
+        img={showCaseImages().culturalFood}
       >
-        <p>
+        <P
+          width="242px"
+          color="#3b3b3b"
+          fontsize="11px"
+          height="52px"
+          margintop="24px"
+        >
           It's easy to find restaurants offering divers food, but only here you
           will discover a variety of cultural flavors.
-        </p>
+        </P>
       </ShowCaseItem>
       <ShowCaseItem
         title="Exciting new moments"
-        img="https://s3.amazonaws.com/FringeBucket/image_placeholder.png"
+        img={showCaseImages().newMoments}
       >
-        <p>
+        <P
+          width="242px"
+          color="#3b3b3b"
+          fontsize="11px"
+          height="52px"
+          margintop="24px"
+        >
           Get to know other countries' cuisine, way of living and histtory
           without the cost of a plane ticket or living the citty
-        </p>
+        </P>
       </ShowCaseItem>
       <ShowCaseItem
         title="Share your experiences"
-        img="https://s3.amazonaws.com/FringeBucket/image_placeholder.png"
+        img={showCaseImages().experiences}
       >
-        <p>
+        <P
+          width="242px"
+          color="#3b3b3b"
+          fontsize="11px"
+          height="52px"
+          margintop="24px"
+        >
           Don't enjoy only the different cultural flavors, share the different
           places of culinary art with your friends
-        </p>
+        </P>
       </ShowCaseItem>
     </ShowCaseItemWrapper>
-  </section>
+  </ShowCaseContainer>
 )
 
+const ShowCaseContainer = styled.section`
+  padding: 5% 5% 0% 5%;
+`
+
+const ShowCaseTitleWrapper = styled.div`
+  h1 {
+    margin: 0;
+  }
+`
+
+const FkP = styled.p`
+  width: 489px;
+  height: 22px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9292af;
+`
 const ShowCaseItemWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;

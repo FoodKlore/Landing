@@ -22,10 +22,10 @@ const Banner = () => (
   >
     <div>
       <H1> Enjoy a world </H1> <h2> culture flavors around you </h2>
-      <P>
+      <p>
         Find that place who has the same test you were looking for and share the
         best of cuisines with your friends
-      </P>
+      </p>
       <section>
         <button> Play store </button> <button> apple sttore </button>
       </section>
