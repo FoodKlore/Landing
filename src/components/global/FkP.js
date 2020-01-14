@@ -3,8 +3,6 @@ import styled from "styled-components"
 const FkP = styled.p`
   width: 590px;
   height: 46px;
-  font-family: Montserrat;
-  font-size: 15px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -12,6 +10,8 @@ const FkP = styled.p`
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
 `
 
 export default FkP

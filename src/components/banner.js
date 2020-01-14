@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import BannerImage from "./bannerImage"
 import { H1, P } from "./global/"
+import AndroidDownloadButton from "./androidDownloadButton"
+import IOSDownloadButton from "./iOSDownloadButton"
 
 const Banner = () => (
   <MainSection
@@ -14,20 +16,43 @@ const Banner = () => (
       backgroundPositionX: "right, left, 30px",
       backgroundPositionY: "bottom, bottom, -100px",
       backgroundSize: "80%, 35%",
-      padding: "5%",
+      padding: "0% 5% 10% 5%",
       width: "100%",
       height: "610px",
       objectFit: "contain",
     }}
   >
-    <div>
-      <H1> Enjoy a world </H1> <h2> culture flavors around you </h2>
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <H1> Enjoy a world </H1>
+      <h2
+        style={{
+          fontSize: "32px",
+          fontWeight: "Medium",
+          margin: 0,
+        }}
+      >
+        culture flavors around you
+      </h2>
       <P>
         Find that place who has the same test you were looking for and share the
         best of cuisines with your friends
       </P>
-      <section>
-        <button> Play store </button> <button> apple sttore </button>
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+        }}
+      >
+        <AndroidDownloadButton />
+        <IOSDownloadButton />
       </section>
     </div>
   </MainSection>
