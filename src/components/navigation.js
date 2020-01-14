@@ -22,7 +22,7 @@ const Navigation = () => (
         <Link to="/">Foddies</Link>
       </li>
       <li>
-        <FkDownloadApp />
+        <FkDownloadApp width="149px" height="42px" />
       </li>
     </LinksWrapper>
   </nav>
@@ -42,6 +42,16 @@ const LinksWrapper = styled.ul`
       a {
         color: white;
         text-decoration: none;
+        height: 14px;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
         &:hover {
           border-bottom: 2px solid #e83b54;
           padding-bottom: 14px;
