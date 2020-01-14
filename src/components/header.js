@@ -8,12 +8,14 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#69BC8B`,
+      paddingTop: "2.5%",
+      paddingBottom: "2.5%",
     }}
   >
     <div style={styles.navBar}>
-      <figure style={styles.logoWrapper}>
+      <div style={{ width: `101px` }}>
         <FoodKloreLogo />
-      </figure>
+      </div>
       <Navigation />
     </div>
   </header>
@@ -26,8 +28,10 @@ const styles = {
   },
   navBar: {
     display: "flex",
-    justifyContent: "space-evenly",
-    alignItems: "flex-end",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "0% 5% 0% 5%",
+    width: "100%",
   },
   logoWrapper: {
     display: "flex",
