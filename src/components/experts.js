@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import ExpertsSectionBackground from "./expertBackgroundImage"
+import AndroidDownloadButton from "./androidDownloadButton"
+import IOSDownloadButton from "./iOSDownloadButton"
 
 const Experts = () => (
   <ExpertsSection
@@ -37,8 +39,8 @@ const Experts = () => (
           justifyContent: "center",
         }}
       >
-        <button>android</button>
-        <button>iOS</button>
+        <AndroidDownloadButton style={{ marginRight: "15px" }} />
+        <IOSDownloadButton style={{ padding: "9px 0" }} />
       </div>
     </div>
   </ExpertsSection>

@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import BannerImage from "./bannerImage"
+import AndroidDownloadButton from "./androidDownloadButton"
+import IOSDownloadButton from "./iOSDownloadButton"
 
 const Banner = () => (
   <MainSection
@@ -16,8 +18,15 @@ const Banner = () => (
         Find that place who has the same test you were looking for and share the
         best of cuisines with your friends
       </p>
-      <section>
-        <button> Play store </button> <button> apple sttore </button>
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+        }}
+      >
+        <AndroidDownloadButton />
+        <IOSDownloadButton />
       </section>
     </div>
   </MainSection>
