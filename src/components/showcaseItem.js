@@ -1,18 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import { H3 } from "./global/"
 
 const ShowCaseItem = ({ title, img, children }) => (
   <ItemWrapper>
-    <figure>
-      <img src={img} />
-    </figure>
-    <h3> {title} </h3>
+    <figure>{img}</figure>
+    <H3> {title} </H3>
     {children}
   </ItemWrapper>
 )
 
 const ItemWrapper = styled.section`
-  padding: 5%;
+  padding: 0% 2.5%;
   display: flex;
   flex-direction: column;
 `

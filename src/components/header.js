@@ -23,8 +23,8 @@ const Header = ({ siteTitle }) => (
 
 const styles = {
   logo: {
-    width: "100px",
-    height: "100px",
+    width: "101px",
+    height: "43.3px",
   },
   navBar: {
     display: "flex",

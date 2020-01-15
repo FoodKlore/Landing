@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import { DownloadApp } from "./global/"
 const Navigation = () => (
   <nav
     style={{
@@ -22,9 +22,7 @@ const Navigation = () => (
         <Link to="/">Foddies</Link>
       </li>
       <li>
-        <button>
-          <span> Download App </span>
-        </button>
+        <DownloadApp width="149px" height="42px" />
       </li>
     </LinksWrapper>
   </nav>
@@ -44,20 +42,20 @@ const LinksWrapper = styled.ul`
       a {
         color: white;
         text-decoration: none;
+        height: 14px;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
         &:hover {
           border-bottom: 2px solid #e83b54;
           padding-bottom: 14px;
           box-sizing: border-box;
-        }
-      }
-      button {
-        background-color: #e83b54;
-        color: white;
-        border-color: #e83b54;
-        border-radius: 7%;
-        height: 50px;
-        span {
-          padding: 10px;
         }
       }
     }
