@@ -1,7 +1,7 @@
-import FkH1 from "./FkH1"
-import FkP from "./FkP"
-import FkH2 from "./FkH2"
-import FkH3 from "./FkH3"
-import FkDownloadApp from "./downloadAppButton"
+import H1 from "./H1"
+import P from "./P"
+import H2 from "./H2"
+import H3 from "./H3"
+import DownloadApp from "./downloadAppButton"
 
-export { FkH1 as H1, FkP as P, FkH2 as H2, FkH3 as H3, FkDownloadApp }
+export { H1, P, H2, H3, DownloadApp }

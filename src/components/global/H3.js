@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const FkH3 = styled.h3`
+const H3 = styled.h3`
   /* width: 87px; */
   height: 18px;
   font-size: 14px;
@@ -14,4 +14,4 @@ const FkH3 = styled.h3`
   color: #37496d;
 `
 
-export default FkH3
+export default H3

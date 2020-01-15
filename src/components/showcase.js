@@ -3,7 +3,7 @@ import styled from "styled-components"
 import ShowCaseItem from "./showcaseItem"
 import { H2, P } from "./global/index"
 import showCaseImages from "./showCaseImages"
-import { FkDownloadApp } from "./global"
+import { DownloadApp } from "./global"
 
 const ShowCase = () => (
   <ShowCaseContainer>
@@ -88,7 +88,7 @@ const ShowCase = () => (
         marginTop: 45,
       }}
     >
-      <FkDownloadApp />
+      <DownloadApp />
     </div>
   </ShowCaseContainer>
 )

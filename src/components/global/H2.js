@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const FkH2 = styled.h1`
+const H2 = styled.h1`
   width: 502px;
   height: 41px;
   font-family: Montserrat;
@@ -15,4 +15,4 @@ const FkH2 = styled.h1`
   color: #e83b54;
 `
 
-export default FkH2
+export default H2

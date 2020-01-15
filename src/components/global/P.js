@@ -16,7 +16,7 @@ const Test = styled.p`
   color: ${props => props.color};
 `
 
-const FkP = ({ children, width, color, fontsize, height, margintop }) => (
+const P = ({ children, width, color, fontsize, height, margintop }) => (
   <Test
     width={width}
     color={color}
@@ -28,4 +28,4 @@ const FkP = ({ children, width, color, fontsize, height, margintop }) => (
   </Test>
 )
 
-export default FkP
+export default P

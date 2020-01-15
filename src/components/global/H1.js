@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const FkH1 = styled.h1`
+const H1 = styled.h1`
   width: 711px;
   font-stretch: normal;
   font-style: normal;
@@ -14,4 +14,4 @@ const FkH1 = styled.h1`
   margin: 0;
 `
 
-export default FkH1
+export default H1

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { FkDownloadApp } from "./global/"
+import { DownloadApp } from "./global/"
 const Navigation = () => (
   <nav
     style={{
@@ -22,7 +22,7 @@ const Navigation = () => (
         <Link to="/">Foddies</Link>
       </li>
       <li>
-        <FkDownloadApp width="149px" height="42px" />
+        <DownloadApp width="149px" height="42px" />
       </li>
     </LinksWrapper>
   </nav>

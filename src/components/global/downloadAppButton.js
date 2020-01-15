@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const FkDownloadApp = ({ width, height }) => (
+const DownloadApp = ({ width, height }) => (
   <Button width={width} height={height}>
     <span> Download App </span>
   </Button>
@@ -28,4 +28,4 @@ const Button = styled.button`
   }
 `
 
-export default FkDownloadApp
+export default DownloadApp
