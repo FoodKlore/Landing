@@ -50,8 +50,8 @@ const Banner = () => (
         style={{
           position: "absolute",
           right: 0,
-          width: "75%",
-          height: "100%",
+          width: "auto",
+          height: "auto",
         }}
       />
       <H1> Enjoy a world </H1>
