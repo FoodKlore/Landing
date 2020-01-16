@@ -4,19 +4,29 @@ import BannerImage from "./bannerImage"
 import { H1, P } from "./global/"
 import AndroidDownloadButton from "./androidDownloadButton"
 import IOSDownloadButton from "./iOSDownloadButton"
+import bannerData from "../components/banner.json"
+import Lottie from "react-lottie"
+
+const defaultOptions = {
+  loop: false,
+  autoplay: true,
+  animationData: bannerData,
+  rendererSettings: {
+    // preserveAspectRatio: "xMidYMid slice",
+  },
+}
 
 const Banner = () => (
   <MainSection
     style={{
-      backgroundImage: `url(${BannerImage().background1}), url(${
-        BannerImage().background2
-      }), url(${BannerImage().background3})`,
+      backgroundImage: `url(${BannerImage().background2}), url(${
+        BannerImage().background3
+      })`,
       backgroundColor: "#69bc8b",
       backgroundRepeat: "no-repeat, no-repeat",
-      backgroundPositionX: "right, left, 30px",
-      backgroundPositionY: "bottom, bottom, -100px",
-      backgroundSize: "80%, 35%",
-      padding: "0% 5% 10% 5%",
+      backgroundPosition: "0px bottom, 0px bottom",
+      backgroundSize: "35%, 75%",
+      padding: "0% 0% 0% 5%",
       width: "100%",
       height: "610px",
       objectFit: "contain",
@@ -28,8 +38,22 @@ const Banner = () => (
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        position: "relative",
       }}
     >
+      <Lottie
+        options={defaultOptions}
+        isStopped={false}
+        isPaused={false}
+        width={800}
+        position="absolute"
+        style={{
+          position: "absolute",
+          right: 0,
+          width: "75%",
+          height: "100%",
+        }}
+      />
       <H1> Enjoy a world </H1>
       <h2
         style={{
@@ -40,7 +64,7 @@ const Banner = () => (
       >
         culture flavors around you
       </h2>
-      <P fontsize="15px" margintop="0px">
+      <P fontsize="15px" margintop="0px" width="50%">
         Find that place who has the same test you were looking for and share the
         best of cuisines with your friends
       </P>
