@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap");
 
 html {
   -ms-text-size-adjust: 100%;
@@ -186,7 +186,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'Montserrat', serif;
+  font: 112.5%/1.45em "Montserrat", serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
