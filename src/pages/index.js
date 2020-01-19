@@ -7,6 +7,7 @@ import SEO from "src/components/seo"
 import Banner from "src/components/banner"
 import ShowCase from "src/components/showcase"
 import Experts from "src/components/experts"
+import DownloadAppSection from "../components/downloadAppSection"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Banner />
     <ShowCase />
     <Experts />
+    <DownloadAppSection />
   </Layout>
 )
 
