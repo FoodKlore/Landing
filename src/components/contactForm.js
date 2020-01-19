@@ -47,8 +47,8 @@ const ContactForm = () => (
 )
 
 const ContactFormWrapper = styled.section`
-  width: 1178px;
-  height: 322px;
+  width: 1322px;
+  height: 316px;
   padding: 5%;
   background-color: #e83b54;
   display: flex;
