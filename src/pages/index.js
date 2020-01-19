@@ -8,6 +8,7 @@ import Banner from "src/components/banner"
 import ShowCase from "src/components/showcase"
 import Experts from "src/components/experts"
 import DownloadAppSection from "../components/downloadAppSection"
+import ContactForm from "../components/contactForm"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <ShowCase />
     <Experts />
     <DownloadAppSection />
+    <ContactForm />
   </Layout>
 )
 
