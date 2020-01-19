@@ -26,7 +26,7 @@ const Banner = () => (
       backgroundRepeat: "no-repeat, no-repeat",
       backgroundPosition: "0px bottom, 0px bottom",
       backgroundSize: "35%, 75%",
-      padding: "0% 0% 0% 5%",
+      padding: "0% 0% 5% 5%",
       width: "100%",
       height: "610px",
       objectFit: "contain",
@@ -37,7 +37,7 @@ const Banner = () => (
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         position: "relative",
       }}
     >
@@ -45,39 +45,52 @@ const Banner = () => (
         options={defaultOptions}
         isStopped={false}
         isPaused={false}
-        width={800}
+        width={600}
         position="absolute"
         style={{
+          width: "1025px",
           position: "absolute",
           right: 0,
-          width: "auto",
-          height: "auto",
+          height: "unset",
+          height: "696px",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "flex-end",
         }}
       />
-      <H1> Enjoy a world </H1>
-      <h2
+      <div
         style={{
-          fontSize: "32px",
-          fontWeight: "Medium",
-          margin: 0,
-        }}
-      >
-        culture flavors around you
-      </h2>
-      <P fontsize="15px" margintop="0px" width="50%">
-        Find that place who has the same test you were looking for and share the
-        best of cuisines with your friends
-      </P>
-      <section
-        style={{
+          height: "100%",
+          justifyContent: "center",
           display: "flex",
-          justifyContent: "flex-start",
-          alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        <AndroidDownloadButton />
-        <IOSDownloadButton />
-      </section>
+        <H1> Enjoy a world </H1>
+        <h2
+          style={{
+            fontSize: "32px",
+            fontWeight: "Medium",
+            margin: 0,
+          }}
+        >
+          culture flavors around you
+        </h2>
+        <P fontsize="15px" margintop="0px" width="50%">
+          Find that place who has the same test you were looking for and share
+          the best of cuisines with your friends
+        </P>
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <AndroidDownloadButton />
+          <IOSDownloadButton />
+        </section>
+      </div>
     </div>
   </MainSection>
 )
