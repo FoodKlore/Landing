@@ -4,6 +4,9 @@ import ShowCaseItem from "./showcaseItem"
 import { H2, P } from "./global/index"
 import showCaseImages from "./showCaseImages"
 import { DownloadApp } from "./global"
+import shareYourExperiences from "../components/shareYourExperiences.json"
+import inYourArea from "../components/inYourArea.json"
+import newMoments from "../components/newMoments.json"
 
 const ShowCase = () => (
   <ShowCaseContainer>
@@ -21,7 +24,7 @@ const ShowCase = () => (
       </P>
     </ShowCaseTitleWrapper>
     <ShowCaseItemWrapper>
-      <ShowCaseItem title="In your area" img={showCaseImages().inYourArea}>
+      <ShowCaseItem title="In your area" animationData={shareYourExperiences}>
         <P
           width="242px"
           color="#3b3b3b"
@@ -33,10 +36,7 @@ const ShowCase = () => (
           flavors you don't know YET
         </P>
       </ShowCaseItem>
-      <ShowCaseItem
-        title="New culture food"
-        img={showCaseImages().culturalFood}
-      >
+      <ShowCaseItem title="New culture food" animationData={inYourArea}>
         <P
           width="242px"
           color="#3b3b3b"
@@ -48,10 +48,7 @@ const ShowCase = () => (
           will discover a variety of cultural flavors.
         </P>
       </ShowCaseItem>
-      <ShowCaseItem
-        title="Exciting new moments"
-        img={showCaseImages().newMoments}
-      >
+      <ShowCaseItem title="Exciting new moments" animationData={newMoments}>
         <P
           width="242px"
           color="#3b3b3b"
@@ -65,7 +62,7 @@ const ShowCase = () => (
       </ShowCaseItem>
       <ShowCaseItem
         title="Share your experiences"
-        img={showCaseImages().experiences}
+        animationData={shareYourExperiences}
       >
         <P
           width="242px"
