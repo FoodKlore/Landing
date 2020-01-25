@@ -51,7 +51,6 @@ const Banner = () => (
           width: "1025px",
           position: "absolute",
           right: 0,
-          height: "unset",
           height: "696px",
           display: "flex",
           justifyContent: "flex-end",
