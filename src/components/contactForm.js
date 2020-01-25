@@ -25,7 +25,7 @@ const ContactForm = () => (
         flex: 1,
       }}
     >
-      <P margin={0} fontsize={22} weight={600} lineheight={1.45}>
+      <P margin={0} fontsize={22} weight={600} lineheight={"normal"}>
         Come and experience <br /> the &nbsp;
         <span
           style={{
@@ -79,7 +79,6 @@ const InputSubmit = styled.input.attrs(props => ({
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.25;
   letter-spacing: normal;
   text-align: center;
   align-self: flex-end;
