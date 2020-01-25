@@ -4,7 +4,7 @@ import BannerImage from "./bannerImage"
 import { H1, P } from "./global/"
 import AndroidDownloadButton from "./androidDownloadButton"
 import IOSDownloadButton from "./iOSDownloadButton"
-import bannerData from "../components/banner.json"
+import bannerData from "../components/Object3.json"
 import Lottie from "react-lottie"
 
 const defaultOptions = {
