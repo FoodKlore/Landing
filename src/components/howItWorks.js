@@ -51,12 +51,12 @@ const HowItWorks = () => (
             style={{
               fontWeight: "600",
               fontSize: "30px",
-              marginBottom: "10px",
+              marginBottom: "5px",
             }}
           >
             How it works?
           </h2>
-          <p>
+          <p style={{ fontSize: "16px", lineHeight: "19px", color: "#9292af" }}>
             Using our application is very easy and practical, just follow these
             steps
           </p>
