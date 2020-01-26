@@ -10,11 +10,13 @@ const Experts = () => (
       maxWidth: "1080px",
       width: "1080px",
       margin: "0 auto",
+      padding: "0 70px",
+      position: "relative",
     }}
   >
     <div
       style={{
-        padding: "175px 220px",
+        padding: "200px 190px",
         backgroundImage: `url(${
           ExpertsSectionBackground().expertsSectionBackgroundImage
             .childImageSharp.fluid.src
@@ -51,8 +53,8 @@ const ExpertsSection = styled.section`
   p {
     color: #fff;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 25px;
   }
 `
