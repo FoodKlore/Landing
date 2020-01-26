@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+    <defs>
+        <style>
+            .cls-1{opacity:.5}.cls-2,.cls-3{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}.cls-3{fill-rule:evenodd}
+        </style>
+    </defs>
+    <g id="Instagram" class="cls-1" transform="translate(1 1)">
+        <rect id="Rectángulo_4" width="15" height="15" class="cls-2" data-name="Rectángulo 4" rx="5"/>
+        <path id="Trazado_4" d="M1751.965 6229.5a2.977 2.977 0 1 1-2.509-2.508 2.984 2.984 0 0 1 2.509 2.508z" class="cls-3" data-name="Trazado 4" transform="translate(-1741.473 -6222.282)"/>
+    </g>
+</svg>
