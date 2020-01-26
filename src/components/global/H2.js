@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const H2 = styled.h1`
+const H2 = styled.h2`
   width: 502px;
   height: 41px;
   font-family: Montserrat;
