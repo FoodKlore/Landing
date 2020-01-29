@@ -8,6 +8,8 @@ const HowItWorks = () => (
     style={{
       backgroundColor: "#f7f8f9",
       height: "1154px",
+      width: "100%",
+      marginTop: "-75px",
     }}
   >
     <div
