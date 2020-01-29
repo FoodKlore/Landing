@@ -28,7 +28,16 @@ const howItWorksData = [
 ]
 
 const HowItWorksItem = props => (
-  <div key={props.element.id} style={{ display: "flex", marginBottom: "12px" }}>
+  <button
+    key={props.element.id}
+    style={{
+      display: "flex",
+      marginBottom: "12px",
+      borderColor: "transparent",
+      backgroundColor: "transparent",
+      textAlign: "left",
+    }}
+  >
     <div>
       <span
         style={{
@@ -69,7 +78,7 @@ const HowItWorksItem = props => (
         {props.element.description}
       </p>
     </div>
-  </div>
+  </button>
 )
 
 const HowItWorks = () => (
