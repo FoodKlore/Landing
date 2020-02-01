@@ -71,6 +71,8 @@ const Banner = () => (
             fontSize: "32px",
             fontWeight: "Medium",
             margin: 0,
+            fontWeight: 600,
+            marginBottom: 10,
           }}
         >
           culture flavors around you
