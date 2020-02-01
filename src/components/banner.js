@@ -17,54 +17,12 @@ const defaultOptions = {
 }
 
 const Banner = () => (
-  <MainSection
-    style={{
-      backgroundImage: `url(${BannerImage().background2}), url(${
-        BannerImage().background3
-      })`,
-      backgroundColor: "#69bc8b",
-      backgroundRepeat: "no-repeat, no-repeat",
-      backgroundPosition: "0px bottom, 0px bottom",
-      backgroundSize: "35%, 75%",
-      padding: "0% 0% 5% 5%",
-      width: "100%",
-      height: "610px",
-      objectFit: "contain",
-    }}
-  >
-    <div
-      style={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        position: "relative",
-      }}
-    >
-      <Lottie
-        options={defaultOptions}
-        isStopped={false}
-        isPaused={false}
-        width={600}
-        position="absolute"
-        style={{
-          width: "1025px",
-          position: "absolute",
-          right: 0,
-          height: "696px",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "flex-end",
-        }}
-      />
-      <div
-        style={{
-          height: "100%",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+  <MainSection backgroundImage={BannerImage()}>
+    <ResponsiveContainer>
+      <ResponsiveLottie>
+        <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
+      </ResponsiveLottie>
+      <ResponsivePitch>
         <H1> Enjoy a world </H1>
         <h2
           style={{
@@ -89,8 +47,8 @@ const Banner = () => (
           <AndroidDownloadButton />
           <IOSDownloadButton />
         </section>
-      </div>
-    </div>
+      </ResponsivePitch>
+    </ResponsiveContainer>
   </MainSection>
 )
 
@@ -99,6 +57,96 @@ const MainSection = styled.section`
   p,
   h2 {
     color: white;
+  }
+
+  background-image: url(${prop => prop.backgroundImage.background2}),
+    url(${prop => prop.backgroundImage.background3});
+  background-color: #69bc8b;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0px bottom, 0px bottom;
+  background-size: 35%, 75%;
+  padding: 0% 0% 5% 5%;
+  width: 100%;
+  height: 610px;
+  object-fit: contain;
+
+  @media only screen and (max-width: 699px) {
+    background-image: none !important;
+    overflow: hidden;
+    background-color: #69bc8b;
+    padding: 0% 0% 5% 5%;
+    width: 100%;
+    height: 791px;
+    object-fit: contain;
+  }
+`
+
+const ResponsiveContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+`
+const ResponsiveLottie = styled.div`
+  width: 1025px;
+  position: absolute;
+  right: 0;
+  height: 696px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  @media only screen and (max-width: 699px) {
+    width: 650px;
+    position: absolute;
+    right: 0;
+    height: 346px;
+    bottom: -25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transform: translate(70px, 0px);
+  }
+`
+
+const ResponsivePitch = styled.div`
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 699px) {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      width: 100%;
+      font-size: 32px;
+      line-height: 1.16;
+      margin-bottom: 15px !important;
+    }
+
+    h2 {
+      width: 100%;
+      font-size: 24px !important;
+      font-weight: 500;
+      line-height: 1.54;
+      margin-bottom: 15px !important;
+    }
+
+    p {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 15px !important;
+    }
+
+    section {
+      flex-direction: column;
+      z-index: 4;
+    }
   }
 `
 
