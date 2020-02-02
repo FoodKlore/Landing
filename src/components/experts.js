@@ -49,15 +49,9 @@ const ResponsiveExpertsSection = styled.section`
     padding: 0px 12px 0px 12px;
     p {
       width: 235px;
-      height: 254px;
-      font-family: Montserrat;
       font-size: 18px;
       font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
       line-height: 1.67;
-      letter-spacing: normal;
-      text-align: center;
       color: #ffffff;
     }
   }
@@ -78,10 +72,9 @@ const ResponsiveBackground = styled.div`
     display: flex;
   }
 
-  background-image: url(${prop => {
-      return prop.backgrounds.expertsSectionBackgroundImage.childImageSharp
-        .fluid.src
-    }}),
+  background-image: url(${prop =>
+      prop.backgrounds.expertsSectionBackgroundImage.childImageSharp.fluid
+        .src}),
     url(${prop => {
       return prop.backgrounds.expertsSectionBackgroundImageRotated
         .childImageSharp.fluid.src
