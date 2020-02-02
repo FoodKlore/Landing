@@ -44,9 +44,8 @@ const ResponsiveExpertsSection = styled.section`
   margin: 0 auto;
 
   @media only screen and (max-width: 699px) {
-    width: 100%;
-    max-width: 100%;
-    padding: 0px 12px 0px 12px;
+    width: 90%;
+    max-width: 90%;
     p {
       width: 235px;
       font-size: 18px;

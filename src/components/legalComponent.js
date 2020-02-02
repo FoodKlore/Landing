@@ -36,6 +36,18 @@ const LegalWrapper = styled.section`
   padding-right: 61px;
   padding-left: 61px;
   align-items: center;
+  @media only screen and (max-width: 699px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 90%;
+    margin-top: 62px;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 `
 
 const SocialMediaWrapper = styled.div`
@@ -48,6 +60,17 @@ const SocialMediaWrapper = styled.div`
     margin: 0 15px 0 15px;
     &:last-child {
       margin: 0 0px 0 15px;
+    }
+  }
+  @media only screen and (max-width: 699px) {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
+    figure {
+      margin: 0 !important;
     }
   }
 `

@@ -5,15 +5,7 @@ import AndroidDownloadButton from "./androidDownloadButton"
 import IOSDownloadButton from "./iOSDownloadButton"
 
 const Footer = () => (
-  <footer
-    style={{
-      display: "flex",
-      marginTop: "50px",
-      width: "100%",
-      paddingRight: "61px",
-      paddingLeft: "61px",
-    }}
-  >
+  <ResponsiveFooter>
     <div>
       <P fontsize={"14px"} fontweight={500} lineheight={2.29} color="#2c2e3f">
         Contact info
@@ -57,8 +49,19 @@ const Footer = () => (
       <AndroidDownloadButton />
       <IOSDownloadButton />
     </section>
-  </footer>
+  </ResponsiveFooter>
 )
+
+const ResponsiveFooter = styled.footer`
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+  padding-right: 61px;
+  padding-left: 61px;
+  @media only screen and (max-width: 699px) {
+    display: none;
+  }
+`
 
 const InfoWrapper = styled.div`
   display: flex;

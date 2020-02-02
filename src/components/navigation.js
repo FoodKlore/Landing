@@ -59,6 +59,11 @@ const LinksWrapper = styled.ul`
         }
       }
     }
+    @media only screen and (max-width: 699px) {
+      li {
+        display: none;
+      }
+    }
   }
 `
 

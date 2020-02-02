@@ -44,6 +44,9 @@ const DownloadButtonsWrapper = styled.figure`
 `
 
 const DownloadAppSectionWrapper = styled.figure`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   @media only screen and (max-width: 699px) {
     display: flex;
     align-items: flex-end;
@@ -61,6 +64,9 @@ const ResponsiveDownloadWrapper = styled.div`
 
 const ResponsiveTitleWrapper = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   @media only screen and (max-width: 699px) {
     h1 {
       width: 100%;
