@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import SignUp1 from "src/images/SignUp1x.png"
@@ -52,7 +52,7 @@ const HowItWorksItem = props => (
           fontSize: "15px",
           border: "1px solid #37496d",
         }}
-        className={props.element.isActive ? "active" : "inactive"}
+        className={props.className}
       >
         {props.element.step}
       </span>
@@ -81,78 +81,92 @@ const HowItWorksItem = props => (
   </button>
 )
 
-const HowItWorks = () => (
-  <HowItWorksSection
-    style={{
-      backgroundColor: "#f7f8f9",
-      height: "1154px",
-      width: "100%",
-      marginTop: "-75px",
-    }}
-  >
-    <div
+const HowItWorks = () => {
+  const [step, setStep] = useState(1)
+  // const handleStepChange = step => {
+  //   return setStep(step)
+  // }
+  // useEffect(() => {}, [step])
+  return (
+    <HowItWorksSection
       style={{
-        maxWidth: "1080px",
-        width: "1080px",
-        margin: "0 auto -70px auto",
-        padding: "215px 0",
+        backgroundColor: "#f7f8f9",
+        height: "1154px",
+        width: "100%",
+        marginTop: "-75px",
       }}
     >
       <div
         style={{
-          margin: "0 auto",
-          display: "flex",
+          maxWidth: "1080px",
+          width: "1080px",
+          margin: "0 auto -70px auto",
+          padding: "215px 0",
         }}
       >
         <div
           style={{
-            paddingTop: "60px",
-            paddingLeft: "245px",
-            paddingRight: "75px",
+            margin: "0 auto",
+            display: "flex",
           }}
         >
-          <figure>
-            <img src={SignUp1} alt="placeholder" />
-            <figcaption
-              style={{
-                fontSize: "10px",
-                lineHeight: "13px",
-                color: "#a3a3a3",
-                textAlign: "center",
-              }}
-            >
-              The app will show you more information about the country and food
-              you will try
-            </figcaption>
-          </figure>
-        </div>
-        <div style={{ paddingRight: "25px" }}>
-          <h2
+          <div
             style={{
-              fontWeight: "600",
-              fontSize: "30px",
-              marginBottom: "5px",
+              paddingTop: "60px",
+              paddingLeft: "245px",
+              paddingRight: "75px",
             }}
           >
-            How it works?
-          </h2>
-          <p style={{ fontSize: "16px", lineHeight: "19px", color: "#9292af" }}>
-            Using our application is very easy and practical, just follow these
-            steps
-          </p>
-          {howItWorksData.map(element => (
-            <HowItWorksItem key={element.id} element={element}></HowItWorksItem>
-          ))}
+            <figure>
+              <img src={SignUp1} alt="placeholder" />
+              <figcaption
+                style={{
+                  fontSize: "10px",
+                  lineHeight: "13px",
+                  color: "#a3a3a3",
+                  textAlign: "center",
+                }}
+              >
+                The app will show you more information about the country and
+                food you will try
+              </figcaption>
+            </figure>
+          </div>
+          <div style={{ paddingRight: "25px" }}>
+            <h2
+              style={{
+                fontWeight: "600",
+                fontSize: "30px",
+                marginBottom: "5px",
+              }}
+            >
+              How it works?
+            </h2>
+            <p
+              style={{ fontSize: "16px", lineHeight: "19px", color: "#9292af" }}
+            >
+              Using our application is very easy and practical, just follow
+              these steps
+            </p>
+            {howItWorksData.map(element => (
+              <HowItWorksItem
+                key={element.id}
+                element={element}
+                className={element.step === step ? "active" : "inactive"}
+                // onClick={handleStepChange}
+              ></HowItWorksItem>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </HowItWorksSection>
-)
+    </HowItWorksSection>
+  )
+}
 
 const HowItWorksSection = styled.section`
   .active {
-    background-color: "#37496d"
-    color: "#fff"
+    background-color: #37496d;
+    color: #fff;
   }
   h1,
   p {
