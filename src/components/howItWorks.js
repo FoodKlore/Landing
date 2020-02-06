@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import SignUp1 from "src/images/SignUp1x.png"
+import SignUp2 from "src/images/SignUp2x.png"
+import SignUp3 from "src/images/SignUp3x.png"
 
 const howItWorksData = [
   {
@@ -27,66 +29,89 @@ const howItWorksData = [
   },
 ]
 
-const HowItWorksItem = props => (
-  <button
-    key={props.element.id}
-    style={{
-      display: "flex",
-      marginBottom: "12px",
-      borderColor: "transparent",
-      backgroundColor: "transparent",
-      textAlign: "left",
-    }}
-  >
-    <div>
-      <span
-        style={{
-          display: "inline-flex",
-          borderRadius: "100%",
-          width: "40px",
-          height: "40px",
-          justifyContent: "center",
-          alignItems: "center",
-          marginRight: "15px",
-          fontWeight: "600",
-          fontSize: "15px",
-          border: "1px solid #37496d",
-        }}
-        className={props.className}
-      >
-        {props.element.step}
-      </span>
-    </div>
-    <div>
-      <h4
-        style={{
-          fontSize: "13px",
-          fontWeight: "600",
-          color: "#3b3b3b",
-          marginBottom: "16px",
-        }}
-      >
-        {props.element.title}
-      </h4>
-      <p
-        style={{
-          fontSize: "11px",
-          lineHeight: "14px",
-          color: "#3b3b3b",
-        }}
-      >
-        {props.element.description}
-      </p>
-    </div>
-  </button>
-)
+const HowItWorksItem = props => {
+  const handleStepChange = () => {
+    props.onClick(props.element.step)
+  }
+  return (
+    <button
+      key={props.element.id}
+      style={{
+        display: "flex",
+        marginBottom: "12px",
+        borderColor: "transparent",
+        backgroundColor: "transparent",
+        textAlign: "left",
+      }}
+      onClick={handleStepChange}
+    >
+      <div>
+        <span
+          style={{
+            display: "inline-flex",
+            borderRadius: "100%",
+            width: "40px",
+            height: "40px",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: "15px",
+            fontWeight: "600",
+            fontSize: "15px",
+            border: "1px solid #37496d",
+          }}
+          className={props.className}
+        >
+          {props.element.step}
+        </span>
+      </div>
+      <div>
+        <h4
+          style={{
+            fontSize: "13px",
+            fontWeight: "600",
+            color: "#3b3b3b",
+            marginBottom: "16px",
+          }}
+        >
+          {props.element.title}
+        </h4>
+        <p
+          style={{
+            fontSize: "11px",
+            lineHeight: "14px",
+            color: "#3b3b3b",
+          }}
+        >
+          {props.element.description}
+        </p>
+      </div>
+    </button>
+  )
+}
 
 const HowItWorks = () => {
   const [step, setStep] = useState(1)
-  // const handleStepChange = step => {
-  //   return setStep(step)
-  // }
-  // useEffect(() => {}, [step])
+  const handleStepChange = step => {
+    setStep(step)
+    switch (step) {
+      case 1:
+        setStepImage(SignUp1)
+        break
+      case 2:
+        setStepImage(SignUp2)
+        break
+      case 3:
+        setStepImage(SignUp3)
+        break
+      default:
+        console.error(
+          new Error(
+            "No step selected maybe, therefore, not sure what image to show"
+          )
+        )
+    }
+  }
+  const [stepImage, setStepImage] = useState(SignUp1)
   return (
     <HowItWorksSection
       style={{
@@ -118,7 +143,7 @@ const HowItWorks = () => {
             }}
           >
             <figure>
-              <img src={SignUp1} alt="placeholder" />
+              <img src={stepImage} alt="placeholder" />
               <figcaption
                 style={{
                   fontSize: "10px",
@@ -153,7 +178,7 @@ const HowItWorks = () => {
                 key={element.id}
                 element={element}
                 className={element.step === step ? "active" : "inactive"}
-                // onClick={handleStepChange}
+                onClick={handleStepChange}
               ></HowItWorksItem>
             ))}
           </div>
