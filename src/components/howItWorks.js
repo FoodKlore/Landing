@@ -105,9 +105,7 @@ const HowItWorks = () => {
         break
       default:
         console.error(
-          new Error(
-            "No step selected maybe, therefore, not sure what image to show"
-          )
+          new Error("No step selected, therefore, not sure what image to show")
         )
     }
   }
@@ -116,7 +114,6 @@ const HowItWorks = () => {
     <HowItWorksSection
       style={{
         backgroundColor: "#f7f8f9",
-        height: "1154px",
         width: "100%",
         marginTop: "-75px",
       }}
@@ -138,7 +135,7 @@ const HowItWorks = () => {
           <div
             style={{
               paddingTop: "60px",
-              paddingLeft: "245px",
+              paddingLeft: "145px",
               paddingRight: "75px",
             }}
           >
