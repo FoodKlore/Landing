@@ -6,7 +6,10 @@ const Carousel = memo(() => {
   return (
     <CarouselWrapper>
       <ButtonResetted>
-        <ArrowToTheLeft src={Arrow} />
+        <ArrowToTheLeft
+          src={Arrow}
+          alt="Arrow inside button for left direction"
+        />
       </ButtonResetted>
       <Comment>
         <CommentParagraph>
@@ -17,7 +20,10 @@ const Carousel = memo(() => {
         <CommentToRestaurant>To Juan Mean Restaurant</CommentToRestaurant>
       </Comment>
       <ButtonResetted>
-        <ArrowToTheRight src={Arrow} />
+        <ArrowToTheRight
+          src={Arrow}
+          alt="Arrow inside button for right direction"
+        />
       </ButtonResetted>
     </CarouselWrapper>
   )
