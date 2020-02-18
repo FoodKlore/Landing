@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import Carousel from "src/components/carousel"
 import { H2, P } from "./global/index"
+
 const FromExperts = () => {
   return (
     <FromExpertsSection>
       <FromExpertsWrapper>
-        <div style={{ paddingRight: "35px" }}>
+        <div>
           <H2 style={{ marginBottom: "5px", height: "auto", width: "auto" }}>
             We hear the experts
           </H2>
@@ -22,7 +24,7 @@ const FromExperts = () => {
             countries and thus authenticate the taste of the food you want to
             enjoy.
           </P>
-          <div>Carousel</div>
+          <Carousel />
         </div>
         <div style={{ paddingLeft: "35px", minWidth: "50%" }}>
           <h1>Test</h1>
