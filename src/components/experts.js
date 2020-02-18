@@ -7,8 +7,8 @@ import IOSDownloadButton from "./iOSDownloadButton"
 const Experts = () => (
   <ExpertsSection
     style={{
-      maxWidth: "1080px",
-      width: "1080px",
+      maxWidth: "1360px",
+      width: "1360px",
       margin: "0 auto",
       padding: "0 70px",
       position: "relative",
