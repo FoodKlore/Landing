@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, memo } from "react"
 import styled from "styled-components"
 
 import SignUp1 from "src/images/SignUp1x.png"
@@ -89,7 +89,7 @@ const HowItWorksItem = props => {
   )
 }
 
-const HowItWorks = () => {
+const HowItWorks = memo(() => {
   const [step, setStep] = useState(1)
   const handleStepChange = step => {
     setStep(step)
@@ -183,7 +183,7 @@ const HowItWorks = () => {
       </div>
     </HowItWorksSection>
   )
-}
+})
 
 const HowItWorksSection = styled.section`
   .active {

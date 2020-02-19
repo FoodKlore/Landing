@@ -4,7 +4,6 @@ import { H3 } from "./global/"
 import Lottie from "react-lottie"
 
 const ShowCaseItem = ({ title, animationData, children }) => {
-  console.log(animationData)
   const defaultOptions = {
     loop: true,
     autoplay: true,

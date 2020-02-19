@@ -1,25 +1,63 @@
-import React, { memo } from "react"
+import React, { useState, memo } from "react"
 import styled from "styled-components"
 import Arrow from "src/images/arrow.svg"
 
+const carouselData = [
+  {
+    id: "ab73e144-e2e0-4dc7-ba7e-0d05b9a7d9c8",
+    commentParagraph:
+      'I tried the "Elemental Plate" in Juan Mean Restaurant and all I can say is that it took me back to the Japanese Food 2 years ago',
+    commentAuthor: "Takehiro Ohno - Japanese professional chef",
+    commentToRestaurant: "To Juan Mean Restaurant",
+  },
+  {
+    id: "f2dd5cb4-37aa-48a3-8717-a8adc7419666",
+    commentParagraph:
+      'The moment I visited "Salvadorean Place" in Florida has been one of the most great experiences I have ever been',
+    commentAuthor: "Takehiro Ohno - Japanese prof",
+    commentToRestaurant: "To Salvadorean Place Restaurantessional chef",
+  },
+  {
+    id: "168459a0-6509-4a8f-bc21-807168abb19d",
+    commentParagraph:
+      'I thought I would have not been able to try the tacos I had on Mexico last year, but when I visited "Jorge\'s Place" I rediscovered my love to tacos',
+    commentAuthor: "Takehiro Ohno - Japanese professional chef",
+    commentToRestaurant: "To Jorge's Place Restaurant",
+  },
+]
+
+let currentComment = 0
+
 const Carousel = memo(() => {
+  const [comment, setComment] = useState(carouselData[currentComment])
+  const handleCommentChangeToTheRight = () => {
+    if (currentComment === carouselData.length - 1) {
+      currentComment = -1
+    }
+    currentComment++
+    setComment(carouselData[currentComment])
+  }
+  const handleCommentChangeToTheLeft = () => {
+    if (currentComment === 0) {
+      currentComment = carouselData.length
+    }
+    currentComment--
+    setComment(carouselData[currentComment])
+  }
   return (
     <CarouselWrapper>
-      <ButtonResetted>
+      <ButtonResetted onClick={handleCommentChangeToTheLeft}>
         <ArrowToTheLeft
           src={Arrow}
           alt="Arrow inside button for left direction"
         />
       </ButtonResetted>
       <Comment>
-        <CommentParagraph>
-          I tasted the “Elemental Plate” of Juan Mean Restaurant and y can say,
-          that it’s so good food. It’s like a original Japanese Food
-        </CommentParagraph>
-        <AuthorSign>Takehiro Ohno - Japanese professional chef</AuthorSign>
-        <CommentToRestaurant>To Juan Mean Restaurant</CommentToRestaurant>
+        <CommentParagraph>{comment.commentParagraph}</CommentParagraph>
+        <AuthorSign>{comment.commentAuthor}</AuthorSign>
+        <CommentToRestaurant>{comment.commentToRestaurant}</CommentToRestaurant>
       </Comment>
-      <ButtonResetted>
+      <ButtonResetted onClick={handleCommentChangeToTheRight}>
         <ArrowToTheRight
           src={Arrow}
           alt="Arrow inside button for right direction"
