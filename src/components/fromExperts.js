@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Carousel from "src/components/carousel"
 import BackgroundExperts from "src/images/BackgroundExperts.svg"
+import Avatars from "src/components/avatars"
 import { H2, P } from "./global/index"
 
 const FromExperts = () => {
@@ -34,10 +35,9 @@ const FromExperts = () => {
             backgroundImage: `url(${BackgroundExperts})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            display: "flex",
-            alignItems: "flex-end",
           }}
         >
+          <Avatars />
           <p
             style={{
               textAlign: "center",
