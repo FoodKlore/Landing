@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Carousel from "src/components/carousel"
+import BackgroundExperts from "src/images/BackgroundExperts.svg"
 import { H2, P } from "./global/index"
 
 const FromExperts = () => {
@@ -26,8 +27,36 @@ const FromExperts = () => {
           </P>
           <Carousel />
         </div>
-        <div style={{ paddingLeft: "35px", minWidth: "50%" }}>
-          <h1>Test</h1>
+        <div
+          style={{
+            paddingLeft: "35px",
+            minWidth: "50%",
+            backgroundImage: `url(${BackgroundExperts})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            display: "flex",
+            alignItems: "flex-end",
+          }}
+        >
+          <p
+            style={{
+              textAlign: "center",
+              color: "#e83b54",
+              fontSize: "12px",
+              width: "100%",
+              marginBottom: "0",
+            }}
+          >
+            <a
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+              }}
+              href="https://example.com"
+            >
+              View all rates
+            </a>
+          </p>
         </div>
       </FromExpertsWrapper>
     </FromExpertsSection>
