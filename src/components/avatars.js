@@ -4,6 +4,7 @@ import Avatar01 from "src/images/Avatar01.png"
 import Avatar02 from "src/images/Avatar02.png"
 import Avatar03 from "src/images/Avatar03.png"
 import Avatar04 from "src/images/Avatar04.png"
+import CirculeShape from "src/images/CirculeShape.png"
 
 const Avatars = () => {
   return (
@@ -30,7 +31,7 @@ const AvatarsGrid = styled.div`
   .grid-container {
     display: grid;
     grid-template-columns: 1.4fr 1fr 0.7fr 0.3fr 1.6fr;
-    grid-template-rows: 0.7fr 0.9fr 0.7fr 1.7fr 0.1fr;
+    grid-template-rows: 0.7fr 0.9fr 0.7fr 1.7fr 0 1fr;
     grid-template-areas: ". avatar01 avatar01 . ." ". avatar01 avatar01 avatar02 avatar02" "avatar-active avatar-active avatar-active avatar02 avatar02" "avatar-active avatar-active avatar-active . avatar03" "avatar-active avatar-active avatar-active . .";
   }
 
@@ -44,6 +45,15 @@ const AvatarsGrid = styled.div`
 
   .avatar-active {
     grid-area: avatar-active;
+    background-image: url(${CirculeShape});
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 19px;
+    padding-top: 12px;
+
+    img {
+      width: 83%;
+    }
   }
 
   .avatar03 {
