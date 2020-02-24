@@ -31,7 +31,7 @@ const AvatarsGrid = styled.div`
   .grid-container {
     display: grid;
     grid-template-columns: 1.4fr 1fr 0.7fr 0.3fr 1.6fr;
-    grid-template-rows: 0.7fr 0.9fr 0.7fr 1.7fr 0 1fr;
+    grid-template-rows: 0.7fr 0.9fr 0.7fr 1.7fr 0.1fr;
     grid-template-areas: ". avatar01 avatar01 . ." ". avatar01 avatar01 avatar02 avatar02" "avatar-active avatar-active avatar-active avatar02 avatar02" "avatar-active avatar-active avatar-active . avatar03" "avatar-active avatar-active avatar-active . .";
   }
 
@@ -48,11 +48,11 @@ const AvatarsGrid = styled.div`
     background-image: url(${CirculeShape});
     background-repeat: no-repeat;
     background-size: contain;
-    padding-left: 19px;
-    padding-top: 12px;
+    padding-left: 22px;
+    padding-top: 15px;
 
     img {
-      width: 83%;
+      width: 85%;
     }
   }
 
