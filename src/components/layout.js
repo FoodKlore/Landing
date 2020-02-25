@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
 }
 
 const ResponsiveMain = styled.main`
+  margin-top: -1px;
   @media only screen and (max-width: 699px) {
     width: 100%;
     max-width: 100%;

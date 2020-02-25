@@ -74,9 +74,9 @@ const MainSection = styled.section`
     background-image: none !important;
     overflow: hidden;
     background-color: #69bc8b;
-    padding: 0% 0% 5% 5%;
+    /* padding: 0% 0% 5% 5%; */
     width: 100%;
-    height: 791px;
+    height: 77vh;
     object-fit: contain;
   }
 `
@@ -87,6 +87,13 @@ const ResponsiveContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+  @media only screen and (max-width: 699px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10vh;
+  }
 `
 const ResponsiveLottie = styled.div`
   width: 1025px;
@@ -115,7 +122,7 @@ const ResponsivePitch = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 699px) {
-    height: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
     display: flex;

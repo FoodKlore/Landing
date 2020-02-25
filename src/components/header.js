@@ -7,7 +7,8 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `#69BC8B`,
-      paddingTop: "2.5%",
+      height: "10vh",
+      display: "flex"
     }}
   >
     <div style={styles.navBar}>

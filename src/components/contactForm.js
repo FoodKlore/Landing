@@ -119,7 +119,7 @@ const InputText = styled.input`
   border: 0;
   margin-bottom: 2%;
   padding: 0% 2%;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
