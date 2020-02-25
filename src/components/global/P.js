@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Test = styled.p`
+const PStyled = styled.p`
   width: ${props => props.width};
   height: ${props => props.height};
   font-family: Montserrat;
@@ -15,31 +15,14 @@ const Test = styled.p`
   margin-top: ${props => (props.margintop ? props.margintop : "auto")};
   color: ${props => props.color};
   margin: ${props => props.margin && props.margin};
+
+  @media screen and (max-width: 699px) {
+    width: auto;
+    height: auto;
+    text-align: ${props => props.mobile_align};
+  }
 `
 
-const P = ({
-  children,
-  width,
-  color,
-  fontsize,
-  height,
-  margintop,
-  margin,
-  weight,
-  lineheight,
-}) => (
-  <Test
-    width={width}
-    color={color}
-    fontsize={fontsize}
-    height={height}
-    lineheight={lineheight}
-    margintop={margintop}
-    margin={margin}
-    weight={weight}
-  >
-    {children}
-  </Test>
-)
+const P = props => <PStyled {...props} />
 
 export default P

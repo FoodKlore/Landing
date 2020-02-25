@@ -9,7 +9,7 @@ const H1 = styled.h1`
   text-align: left;
   color: #ffffff;
   font-size: 48px;
-  font-weight: bolder;
+  font-weight: 900;
   margin: 0;
 `
 

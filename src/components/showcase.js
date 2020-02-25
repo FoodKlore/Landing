@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import ShowCaseItem from "./showcaseItem"
 import { H2, P } from "./global/index"
-import showCaseImages from "./showCaseImages"
 import { DownloadApp } from "./global"
 import shareYourExperiences from "../components/shareYourExperiences.json"
 import inYourArea from "../components/inYourArea.json"
 import newMoments from "../components/newMoments.json"
+import newCulturalFood from "../components/newCulturalFood.json"
 
 const ShowCase = () => (
   <ShowCaseContainer>
@@ -24,7 +24,7 @@ const ShowCase = () => (
       </P>
     </ShowCaseTitleWrapper>
     <ShowCaseItemWrapper>
-      <ShowCaseItem title="In your area" animationData={shareYourExperiences}>
+      <ShowCaseItem title="In your area" animationData={inYourArea}>
         <P
           width="242px"
           color="#3b3b3b"
@@ -36,7 +36,7 @@ const ShowCase = () => (
           flavors you don't know YET
         </P>
       </ShowCaseItem>
-      <ShowCaseItem title="New culture food" animationData={inYourArea}>
+      <ShowCaseItem title="New culture food" animationData={newCulturalFood}>
         <P
           width="242px"
           color="#3b3b3b"
@@ -103,6 +103,7 @@ const ShowCaseTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 699px) {
+    width: 100vw;
     h1 {
       font-size: 24px;
       text-align: center;

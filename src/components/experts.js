@@ -35,8 +35,8 @@ const ResponsiveExpertsSection = styled.section`
   p {
     color: #fff;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 25px;
   }
   max-width: 1080px;
@@ -46,6 +46,7 @@ const ResponsiveExpertsSection = styled.section`
   @media only screen and (max-width: 699px) {
     width: 90%;
     max-width: 90%;
+    z-index: 1;
     p {
       width: 235px;
       font-size: 18px;
