@@ -3,14 +3,14 @@ import styled from "styled-components"
 import Carousel from "src/components/carousel"
 import BackgroundExperts from "src/images/BackgroundExperts.svg"
 import Avatars from "src/components/avatars"
-import { H2, P } from "./global/index"
+import { H2 as Header, P } from "./global/index"
 
 const FromExperts = () => {
   return (
     <FromExpertsSectionResponsive>
       <FromExpertsWrapperResponsive>
         <FromExpertsDescription>
-          <H2 style={{ marginBottom: "5px", height: "auto", width: "auto" }}>
+          <H2>
             We hear the experts
           </H2>
           <P
@@ -60,6 +60,16 @@ const FromExperts = () => {
     </FromExpertsSectionResponsive>
   )
 }
+
+const H2 = styled(Header)`
+  margin-bottom: 5px;
+  height: auto;
+  width: auto;
+
+  @media screen and (max-width: 699px) {
+    margin-bottom: 32px;
+  }
+`
 
 const FromExpertsSectionResponsive = styled.section`
   background-color: #f7f8f9;
