@@ -42,10 +42,11 @@ const ResponsiveExpertsSection = styled.section`
   max-width: 1080px;
   width: 1080px;
   margin: 0 auto;
+  z-index: 1;
 
   @media only screen and (max-width: 699px) {
-    width: 90%;
-    max-width: 90%;
+    width: 90vw;
+    max-width: 90vw;
     z-index: 1;
     p {
       width: 235px;

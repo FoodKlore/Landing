@@ -33,14 +33,7 @@ const FromExperts = () => {
           </P>
           <Carousel />
         </FromExpertsDescription>
-        <div
-          style={{
-            paddingLeft: "35px",
-            minWidth: "50%",
-            backgroundImage: `url(${BackgroundExperts})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain",
-          }}
+        <ResponsiveAvatars backgroundexperts={BackgroundExperts}
         >
           <Avatars />
           <p
@@ -62,7 +55,7 @@ const FromExperts = () => {
               View all rates
             </a>
           </p>
-        </div>
+        </ResponsiveAvatars>
       </FromExpertsWrapperResponsive>
     </FromExpertsSectionResponsive>
   )
@@ -72,8 +65,10 @@ const FromExpertsSectionResponsive = styled.section`
   background-color: #f7f8f9;
   width: 100%;
   @media screen and (max-width: 699px) {
-    padding: 5vw;
     width: 100vw;
+    padding: 10vw;
+    margin-top: -150px;
+    margin-bottom: -20vh;
   }
 `
 
@@ -88,11 +83,13 @@ const FromExpertsWrapperResponsive = styled.section`
   min-height: 627px;
   display: flex;
   @media screen and (max-width: 699px) {
-    padding: 0;
+    padding: 8vw;
     width: 100%;
     display: flex;
     min-width: 100%;
     max-width: 100%;
+    flex-direction: column;
+    margin: 0;
   }
 `
 const FromExpertsDescription = styled.div`
@@ -107,7 +104,23 @@ const FromExpertsDescription = styled.div`
   }
 
   @media screen and (max-width: 699px) {
-    width: 100vw;
+    width: 100%;
+  }
+`
+
+const ResponsiveAvatars = styled.div`
+  padding-left: 35px;
+  min-width: 50%;
+  background-image: url(${props => props.backgroundexperts});
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (max-width: 699px) {
+    padding: 24px 0;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `
 export default FromExperts

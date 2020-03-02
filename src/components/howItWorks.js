@@ -183,6 +183,10 @@ const ResponsiveRow = styled.div`
   width: 1080px;
   margin: 0 auto -70px auto;
   padding: 215px 0;
+
+  @media screen and (max-width: 699px) {
+    width: 90vw;
+  }
 `
 
 const ResponsiveWrapper = styled.div`
@@ -193,6 +197,8 @@ const ResponsiveWrapper = styled.div`
   @media screen and (max-width: 699px) {
     padding: 0;
     margin: 0;
+    width: 100%;
+    display: flex;
   }
 `
 
@@ -230,12 +236,12 @@ const ResponsiveImg = styled.img`
 const ResponsiveSteps = styled.div`
   padding-right: 25px;
   @media screen and (max-width: 699px) {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5vw;
+    padding: 0;
 
     p#how-it-works-label {
       text-align: center;

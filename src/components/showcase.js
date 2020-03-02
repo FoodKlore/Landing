@@ -93,7 +93,9 @@ const ShowCase = () => (
 const ShowCaseContainer = styled.section`
   padding: 5% 5% 0% 5%;
   @media only screen and (max-width: 699px) {
-    margin-top: 105px;
+    margin-top: 5vh;
+    width: 90vw;
+    padding: 0;
   }
 `
 
@@ -103,7 +105,7 @@ const ShowCaseTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 699px) {
-    width: 100vw;
+    width: 100%;
     h1 {
       font-size: 24px;
       text-align: center;

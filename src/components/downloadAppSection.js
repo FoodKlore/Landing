@@ -100,7 +100,7 @@ const ResponsiveSection = styled.section`
   padding: 0% 5%;
   object-fit: contain;
   @media only screen and (max-width: 699px) {
-    height: 1385px;
+    height: 130vh;
     background-image: none;
     justify-content: center;
   }

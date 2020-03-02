@@ -103,6 +103,20 @@ const CommentParagraph = styled.p`
     color: #37496d;
     z-index: -1;
   }
+
+  @media screen and (max-width: 699px) {
+    &::before {
+      content: '"';
+      position: absolute;
+      font-size: 2rem;
+      font-style: italic;
+      left: -24px;
+      top: 0px;
+      opacity: 50%;
+      color: #37496d;
+      z-index: -1;
+    }
+  }
 `
 
 const AuthorSign = styled.p`

@@ -66,6 +66,7 @@ const ContactFormWrapper = styled.section`
     max-width: 90%;
     padding: 0px 12px 0px 12px;
     height: 568px;
+    margin-top: -20vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -127,6 +128,9 @@ const InputText = styled.input`
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  @media only screen and (max-width: 699px) {
+    font-size: 16px;
+  }
 `
 
 export default ContactForm
