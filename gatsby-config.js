@@ -32,5 +32,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-root-import`,
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: `1710898`,
+        sv: `6`,
+      },
+    },
   ],
 }
