@@ -111,7 +111,7 @@ const HowItWorks = memo(() => {
   }
   const [stepImage, setStepImage] = useState(SignUp1)
   return (
-    <HowItWorksSection>
+    <HowItWorksSection id="howitworks">
       <ResponsiveRow
       >
         <ResponsiveContainer

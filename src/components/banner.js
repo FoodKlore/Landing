@@ -17,7 +17,7 @@ const defaultOptions = {
 }
 
 const Banner = () => (
-  <MainSection backgroundImage={BannerImage()}>
+  <MainSection id="home" backgroundImage={BannerImage()}>
     <ResponsiveContainer>
       <ResponsiveLottie>
         <Lottie options={defaultOptions} isStopped={false} isPaused={false} />

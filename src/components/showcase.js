@@ -9,7 +9,7 @@ import newMoments from "../components/newMoments.json"
 import newCulturalFood from "../components/newCulturalFood.json"
 
 const ShowCase = () => (
-  <ShowCaseContainer>
+  <ShowCaseContainer id="whatweoffer">
     <ShowCaseTitleWrapper>
       <H2> Every culture near to you </H2>
       <P

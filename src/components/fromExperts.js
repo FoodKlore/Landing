@@ -7,7 +7,7 @@ import { H2 as Header, P } from "./global/index"
 
 const FromExperts = () => {
   return (
-    <FromExpertsSectionResponsive>
+    <FromExpertsSectionResponsive id="foddies">
       <FromExpertsWrapperResponsive>
         <FromExpertsDescription>
           <H2>
