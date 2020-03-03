@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { DownloadApp } from "./global/"
 import scrollTo from 'gatsby-plugin-smoothscroll'
@@ -12,16 +11,16 @@ const Navigation = () => (
   >
     <LinksWrapper>
       <li>
-        <Link onClick={() => scrollTo("#home")}>Home</Link>
+        <span  onClick={() => scrollTo("#home")} >Home</span>
       </li>
       <li>
-        <Link onClick={() => scrollTo("#whatweoffer")}>What we offer</Link>
+        <span  onClick={() => scrollTo("#whatweoffer")} >What we offer</span>
       </li>
       <li>
-        <Link onClick={() => scrollTo("#howitworks")}>How it works</Link>
+        <span  onClick={() => scrollTo("#howitworks")} >How it works</span>
       </li>
       <li>
-        <Link onClick={() => scrollTo("#foddies")}>Foddies</Link>
+        <span  onClick={() => scrollTo("#foddies")} >Foddies</span>
       </li>
       <li>
         <DownloadApp width="149px" height="42px" />
@@ -41,7 +40,7 @@ const LinksWrapper = styled.ul`
       * {
         white-space: nowrap;
       }
-      a {
+      span {
         color: white;
         text-decoration: none;
         height: 14px;
@@ -54,6 +53,7 @@ const LinksWrapper = styled.ul`
         letter-spacing: normal;
         text-align: left;
         color: #ffffff;
+        cursor: pointer;
         &:hover {
           border-bottom: 2px solid #e83b54;
           padding-bottom: 14px;

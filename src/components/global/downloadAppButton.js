@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const DownloadApp = ({ width, height }) => (
   <Button width={width} height={height}>
-    <span> Download App </span>
+    <p> Download App </p>
   </Button>
 )
 
@@ -14,8 +14,8 @@ const Button = styled.button`
   border-radius: 8px;
   background-color: #e83b54;
   border: 0px;
-  span {
-    width: 85px;
+  p {
+    width: 100%;
     height: 14px;
     font-size: 11px;
     font-weight: 600;
@@ -23,7 +23,7 @@ const Button = styled.button`
     font-style: normal;
     line-height: 1.27;
     letter-spacing: normal;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
   }
 `

@@ -16,14 +16,14 @@ const FromExperts = () => {
           <P
             fontsize="16px"
             color="#9292af"
-            class="description"
+            className="description"
             mobile_align="center"
           >
             Prepare your palate to enjoy the true flavor of each of the world's
             culture
           </P>
           <P
-            class="description"
+            className="description"
             fontsize="11px" color="#3b3b3b"
             mobile_align="center"
           >
