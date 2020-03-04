@@ -15,16 +15,7 @@ const ContactForm = () => (
       backgroundRepeat: `no-repeat`,
     }}
   >
-    <div
-      style={{
-        display: "flex",
-        color: "white",
-        fontWeight: "900",
-        alignItems: "center",
-        margin: "0% 5% 0% 0%",
-        flex: 1,
-      }}
-    >
+    <TitleWrapper>
       <P margin={0} fontsize={22} weight={600} lineheight={"normal"}>
         Come and experience <br /> the &nbsp;
         <span
@@ -37,7 +28,7 @@ const ContactForm = () => (
         </span>
         on your palate
       </P>
-    </div>
+    </TitleWrapper>
     <ContactFormComponent>
       <InputText type="text" placeholder="Name" />
       <InputText type="email" placeholder="Email" />
@@ -45,6 +36,20 @@ const ContactForm = () => (
     </ContactFormComponent>
   </ContactFormWrapper>
 )
+
+const TitleWrapper = styled.div`
+  display: flex;
+  color: white;
+  font-weight: 900;
+  align-items: center;
+  margin: 0% 5% 0% 0%;
+  flex: 1;
+  @media only screen and (max-width: 699px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+`
 
 const ContactFormWrapper = styled.section`
   width: 1322px;
@@ -55,6 +60,17 @@ const ContactFormWrapper = styled.section`
   border-radius: 25px 0px 25px 0px;
   margin-top: -149px;
   z-index: 2;
+
+  @media only screen and (max-width: 699px) {
+    width: 90%;
+    max-width: 90%;
+    padding: 0px 12px 0px 12px;
+    height: 568px;
+    margin-top: -20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const ContactFormComponent = styled.form`
@@ -65,6 +81,13 @@ const ContactFormComponent = styled.form`
   align-items: flex-end;
   align-self: center;
   margin: 0;
+  @media only screen and (max-width: 699px) {
+    width: 100%;
+    justify-content: center;
+    input {
+      width: 100%;
+    }
+  }
 `
 
 const InputSubmit = styled.input.attrs(props => ({
@@ -83,6 +106,10 @@ const InputSubmit = styled.input.attrs(props => ({
   text-align: center;
   align-self: flex-end;
   color: #e83b54;
+  @media only screen and (max-width: 699px) {
+    width: 50% !important;
+    align-self: center;
+  }
 `
 
 const InputText = styled.input`
@@ -93,7 +120,7 @@ const InputText = styled.input`
   border: 0;
   margin-bottom: 2%;
   padding: 0% 2%;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -101,6 +128,9 @@ const InputText = styled.input`
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  @media only screen and (max-width: 699px) {
+    font-size: 16px;
+  }
 `
 
 export default ContactForm

@@ -111,50 +111,23 @@ const HowItWorks = memo(() => {
   }
   const [stepImage, setStepImage] = useState(SignUp1)
   return (
-    <HowItWorksSection
-      style={{
-        backgroundColor: "#f7f8f9",
-        width: "100%",
-        marginTop: "-75px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1080px",
-          width: "1080px",
-          margin: "0 auto -70px auto",
-          padding: "215px 0",
-        }}
+    <HowItWorksSection id="howitworks">
+      <ResponsiveRow
       >
-        <div
-          style={{
-            margin: "0 auto",
-            display: "flex",
-          }}
+        <ResponsiveContainer
         >
-          <div
-            style={{
-              paddingTop: "60px",
-              paddingLeft: "145px",
-              paddingRight: "75px",
-            }}
+          <ResponsiveWrapper
           >
-            <figure>
-              <img src={stepImage} alt="placeholder" />
-              <figcaption
-                style={{
-                  fontSize: "10px",
-                  lineHeight: "13px",
-                  color: "#a3a3a3",
-                  textAlign: "center",
-                }}
+            <ResponsiveFigure>
+              <ResponsiveImg src={stepImage} alt="placeholder" />
+              <ResponsiveFigCaption
               >
                 The app will show you more information about the country and
                 food you will try
-              </figcaption>
-            </figure>
-          </div>
-          <div style={{ paddingRight: "25px" }}>
+              </ResponsiveFigCaption>
+            </ResponsiveFigure>
+          </ResponsiveWrapper>
+          <ResponsiveSteps>
             <h2
               style={{
                 fontWeight: "600",
@@ -165,7 +138,7 @@ const HowItWorks = memo(() => {
               How it works?
             </h2>
             <p
-              style={{ fontSize: "16px", lineHeight: "19px", color: "#9292af" }}
+              id="how-it-works-label"
             >
               Using our application is very easy and practical, just follow
               these steps
@@ -178,14 +151,19 @@ const HowItWorks = memo(() => {
                 onClick={handleStepChange}
               ></HowItWorksItem>
             ))}
-          </div>
-        </div>
-      </div>
+          </ResponsiveSteps>
+        </ResponsiveContainer>
+      </ResponsiveRow>
     </HowItWorksSection>
   )
 })
 
 const HowItWorksSection = styled.section`
+
+  background-color: #f7f8f9;
+  width: 100%;
+  margin-top: -75px;
+
   .active {
     background-color: #37496d;
     color: #fff;
@@ -193,6 +171,96 @@ const HowItWorksSection = styled.section`
   h1,
   p {
   }
+
+  @media screen and (max-width: 699px) {
+    width: 100vw;
+    margin-top: -149px;
+  }
 `
 
+const ResponsiveRow = styled.div`
+  max-width: 1080px;
+  width: 1080px;
+  margin: 0 auto -70px auto;
+  padding: 215px 0;
+
+  @media screen and (max-width: 699px) {
+    width: 90vw;
+  }
+`
+
+const ResponsiveWrapper = styled.div`
+  padding-top: 60px;
+  padding-left: 145px;
+  padding-right: 75px;
+
+  @media screen and (max-width: 699px) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+  }
+`
+
+const ResponsiveContainer = styled.div`
+  margin: 0 auto;
+  display: flex;
+
+  @media screen and (max-width: 699px) {
+    flex-direction: column;
+  }
+`
+
+const ResponsiveFigure = styled.figure`
+  @media screen and (max-width: 699px) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+`
+
+const ResponsiveImg = styled.img`
+  @media screen and (max-width: 699px) {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+    outline: none;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+`
+
+const ResponsiveSteps = styled.div`
+  padding-right: 25px;
+  @media screen and (max-width: 699px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    p#how-it-works-label {
+      text-align: center;
+      margin: 20px 0 35px 0;
+    }
+  }
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #9292af;
+`
+
+const ResponsiveFigCaption = styled.figcaption`
+  font-size: 10px;
+  line-height: 13px;
+  color: #a3a3a3;
+  text-align: center;
+  @media screen and (max-width: 699px) {
+    padding: 5vw;
+  }
+`
 export default HowItWorks

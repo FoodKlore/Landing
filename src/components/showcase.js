@@ -9,7 +9,7 @@ import newMoments from "../components/newMoments.json"
 import newCulturalFood from "../components/newCulturalFood.json"
 
 const ShowCase = () => (
-  <ShowCaseContainer>
+  <ShowCaseContainer id="whatweoffer">
     <ShowCaseTitleWrapper>
       <H2> Every culture near to you </H2>
       <P
@@ -92,11 +92,29 @@ const ShowCase = () => (
 
 const ShowCaseContainer = styled.section`
   padding: 5% 5% 0% 5%;
+  @media only screen and (max-width: 699px) {
+    margin-top: 5vh;
+    width: 90vw;
+    padding: 0;
+  }
 `
 
 const ShowCaseTitleWrapper = styled.div`
   h1 {
     margin: 0;
+  }
+
+  @media only screen and (max-width: 699px) {
+    width: 100%;
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
   }
 `
 
@@ -104,6 +122,16 @@ const ShowCaseItemWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media only screen and (max-width: 699px) {
+    flex-direction: column;
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
 `
 
 export default ShowCase

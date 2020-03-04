@@ -31,25 +31,31 @@ const DownloadAppSectionImages = () => {
 
   return (
     <>
-      <FoodKloreImg
-        fluid={data.iphone.childImageSharp.fluid}
-        style={{
-          width: "269px",
-          height: "542px",
-          zIndex: 2,
-          marginRight: "-15.5%",
-        }}
-      />
-      <FoodKloreImg
-        style={{
-          width: "231px",
-          height: "491px",
-          zIndex: 1,
-        }}
-        fluid={data.iphone.childImageSharp.fluid}
-      />
+      <ResponsiveFoodKloreImgLeft fluid={data.iphone.childImageSharp.fluid} />
+      <ResponsiveFoodKloreImgRight fluid={data.iphone.childImageSharp.fluid} />
     </>
   )
 }
+
+const ResponsiveFoodKloreImgLeft = styled(FoodKloreImg)`
+  width: 269px;
+  height: 542px;
+  z-index: 2;
+  margin-right: -15.5%;
+  @media only screen and (max-width: 699px) {
+    width: 142px;
+    height: 290px;
+  }
+`
+
+const ResponsiveFoodKloreImgRight = styled(FoodKloreImg)`
+  width: 231px;
+  height: 491px;
+  z-index: 1;
+  @media only screen and (max-width: 699px) {
+    width: 131px;
+    height: 264px;
+  }
+`
 
 export default DownloadAppSectionImages

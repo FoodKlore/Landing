@@ -15,6 +15,12 @@ const PStyled = styled.p`
   margin-top: ${props => (props.margintop ? props.margintop : "auto")};
   color: ${props => props.color};
   margin: ${props => props.margin && props.margin};
+
+  @media screen and (max-width: 699px) {
+    width: auto;
+    height: auto;
+    text-align: ${props => props.mobile_align};
+  }
 `
 
 const P = props => <PStyled {...props} />

@@ -3,39 +3,37 @@ import styled from "styled-components"
 import Carousel from "src/components/carousel"
 import BackgroundExperts from "src/images/BackgroundExperts.svg"
 import Avatars from "src/components/avatars"
-import { H2, P } from "./global/index"
+import { H2 as Header, P } from "./global/index"
 
 const FromExperts = () => {
   return (
-    <FromExpertsSection>
-      <FromExpertsWrapper>
-        <div>
-          <H2 style={{ marginBottom: "5px", height: "auto", width: "auto" }}>
+    <FromExpertsSectionResponsive id="foddies">
+      <FromExpertsWrapperResponsive>
+        <FromExpertsDescription>
+          <H2>
             We hear the experts
           </H2>
           <P
             fontsize="16px"
             color="#9292af"
-            style={{ marginBottom: "5px", paddingRight: "65px" }}
+            className="description"
+            mobile_align="center"
           >
             Prepare your palate to enjoy the true flavor of each of the world's
             culture
           </P>
-          <P fontsize="11px" color="#3b3b3b">
+          <P
+            className="description"
+            fontsize="11px" color="#3b3b3b"
+            mobile_align="center"
+          >
             We have the opinion of experts in gastronomy from different
             countries and thus authenticate the taste of the food you want to
             enjoy.
           </P>
           <Carousel />
-        </div>
-        <div
-          style={{
-            paddingLeft: "35px",
-            minWidth: "50%",
-            backgroundImage: `url(${BackgroundExperts})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain",
-          }}
+        </FromExpertsDescription>
+        <ResponsiveAvatars backgroundexperts={BackgroundExperts}
         >
           <Avatars />
           <p
@@ -57,18 +55,34 @@ const FromExperts = () => {
               View all rates
             </a>
           </p>
-        </div>
-      </FromExpertsWrapper>
-    </FromExpertsSection>
+        </ResponsiveAvatars>
+      </FromExpertsWrapperResponsive>
+    </FromExpertsSectionResponsive>
   )
 }
 
-const FromExpertsSection = styled.section`
-  background-color: #f7f8f9;
-  width: 100%;
+const H2 = styled(Header)`
+  margin-bottom: 5px;
+  height: auto;
+  width: auto;
+
+  @media screen and (max-width: 699px) {
+    margin-bottom: 32px;
+  }
 `
 
-const FromExpertsWrapper = styled.section`
+const FromExpertsSectionResponsive = styled.section`
+  background-color: #f7f8f9;
+  width: 100%;
+  @media screen and (max-width: 699px) {
+    width: 100vw;
+    padding: 10vw;
+    margin-top: -150px;
+    margin-bottom: -20vh;
+  }
+`
+
+const FromExpertsWrapperResponsive = styled.section`
   background-color: #fff;
   margin: -35px auto;
   padding: 125px 168px;
@@ -78,6 +92,45 @@ const FromExpertsWrapper = styled.section`
   max-width: 1392px;
   min-height: 627px;
   display: flex;
+  @media screen and (max-width: 699px) {
+    padding: 8vw;
+    width: 100%;
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+`
+const FromExpertsDescription = styled.div`
+  .description {
+    margin-bottom: 5px;
+    padding-right: 65px;
+    @media screen and (max-width: 699px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 699px) {
+    width: 100%;
+  }
 `
 
+const ResponsiveAvatars = styled.div`
+  padding-left: 35px;
+  min-width: 50%;
+  background-image: url(${props => props.backgroundexperts});
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (max-width: 699px) {
+    padding: 24px 0;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`
 export default FromExperts
