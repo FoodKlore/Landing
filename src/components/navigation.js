@@ -1,7 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { DownloadApp } from "./global/"
-import scrollTo from "gatsby-plugin-smoothscroll"
+
+const scrollTo = selector => {
+  document.querySelector(selector).scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  })
+}
 
 const Navigation = () => (
   <nav
@@ -11,28 +17,24 @@ const Navigation = () => (
   >
     <LinksWrapper>
       <li>
-        <a onClick={() => scrollTo("#home")}>Home</a>
+        <a href="#home" onClick={() => scrollTo("#home")}>
+          Home
+        </a>
       </li>
       <li>
-        <a onClick={() => scrollTo("#whatweoffer")}>What we offer</a>
+        <a href="#whatweoffer" onClick={() => scrollTo("#whatweoffer")}>
+          What we offer
+        </a>
       </li>
       <li>
-        <a
-          onClick={() =>
-            scrollTo({
-              top:
-                window.pageYOffset +
-                document.getElementById("howitworks").getBoundingClientRect()
-                  .top +
-                100,
-            })
-          }
-        >
+        <a href="#howitworks" onClick={() => scrollTo("#howitworks>div")}>
           How it works
         </a>
       </li>
       <li>
-        <a onClick={() => scrollTo("#foddies")}>Foddies</a>
+        <a href="#foddies" onClick={() => scrollTo("#foddies")}>
+          Foddies
+        </a>
       </li>
       <li>
         <DownloadApp width="149px" height="42px" />
