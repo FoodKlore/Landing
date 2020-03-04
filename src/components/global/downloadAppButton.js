@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const DownloadApp = ({ width, height }) => (
   <Button width={width} height={height}>
-    <p> Download App </p>
+    Download App
   </Button>
 )
 
@@ -14,18 +14,12 @@ const Button = styled.button`
   border-radius: 8px;
   background-color: #e83b54;
   border: 0px;
-  p {
-    width: 100%;
-    height: 14px;
-    font-size: 11px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.27;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
-  }
+  font-size: 11px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 1.27;
 `
 
 export default DownloadApp
