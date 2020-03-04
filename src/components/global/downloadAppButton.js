@@ -16,9 +16,7 @@ const Button = styled.button`
   border: 0px;
   font-size: 11px;
   font-weight: 600;
-  font-stretch: normal;
   font-style: normal;
-  letter-spacing: normal;
   line-height: 1.27;
 `
 
