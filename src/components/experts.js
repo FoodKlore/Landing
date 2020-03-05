@@ -12,10 +12,10 @@ const Experts = () => (
         and guarantee that our allies have the ability to make you experience
         flavors from other countries.
       </p>
-      <ResponsiveDownloadButtons>
-        <AndroidDownloadButton style={{ marginRight: "15px" }} />
-        <IOSDownloadButton style={{ padding: "9px 0" }} />
-      </ResponsiveDownloadButtons>
+      <section>
+        <AndroidDownloadButton />
+        <IOSDownloadButton />
+      </section>
     </ResponsiveBackground>
   </ResponsiveExpertsSection>
 )
@@ -64,6 +64,12 @@ const ResponsiveBackground = styled.div`
   background-repeat: no-repeat;
   border-radius: 50px 0;
 
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media only screen and (max-width: 699px) {
     padding: 175px 0px;
     height: 776px;
@@ -71,15 +77,18 @@ const ResponsiveBackground = styled.div`
     justify-content: center;
     align-items: center;
     display: flex;
-  }
-
-  background-image: url(${prop =>
+    background-image: url(${prop =>
       prop.backgrounds.expertsSectionBackgroundImage.childImageSharp.fluid
         .src}),
     url(${prop => {
       return prop.backgrounds.expertsSectionBackgroundImageRotated
         .childImageSharp.fluid.src
     }});
+    section {
+      flex-direction: column;
+      z-index: 4;
+    }
+  }
 `
 
 export default Experts

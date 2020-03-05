@@ -77,7 +77,7 @@ const MainSection = styled.section`
     background-color: #69bc8b;
     /* padding: 0% 0% 5% 5%; */
     width: 100%;
-    height: 77vh;
+    height: 90vh;
     object-fit: contain;
   }
 `

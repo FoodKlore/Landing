@@ -11,6 +11,13 @@ const H3 = styled.h3`
   letter-spacing: normal;
   text-align: left;
   color: #37496d;
+
+  @media screen and (max-width: 699px) {
+    font-size: 24px;
+    height: auto;
+    margin: 0;
+    text-align: center;
+  }
 `
 
 export default H3
