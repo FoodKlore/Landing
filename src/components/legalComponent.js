@@ -12,6 +12,7 @@ const LegalComponent = () => (
       lineheight={1.4}
       color="#9292af"
       margin={"0 0 0 70.8px"}
+      mobile_align="center"
     >
       © 2019 Folklore, Designed by Totuxs
     </P>

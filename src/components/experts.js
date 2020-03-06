@@ -77,18 +77,19 @@ const ResponsiveBackground = styled.div`
     justify-content: center;
     align-items: center;
     display: flex;
-    background-image: url(${prop =>
+    section {
+      flex-direction: column;
+      z-index: 4;
+    }
+  }
+
+  background-image: url(${prop =>
       prop.backgrounds.expertsSectionBackgroundImage.childImageSharp.fluid
         .src}),
     url(${prop => {
       return prop.backgrounds.expertsSectionBackgroundImageRotated
         .childImageSharp.fluid.src
     }});
-    section {
-      flex-direction: column;
-      z-index: 4;
-    }
-  }
 `
 
 export default Experts
