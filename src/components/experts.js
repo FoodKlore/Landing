@@ -83,13 +83,8 @@ const ResponsiveBackground = styled.div`
     }
   }
 
-  background-image: url(${prop =>
-      prop.backgrounds.expertsSectionBackgroundImage.childImageSharp.fluid
-        .src}),
-    url(${prop => {
-      return prop.backgrounds.expertsSectionBackgroundImageRotated
-        .childImageSharp.fluid.src
-    }});
+  background-image: url(${prop => prop.backgrounds.expertsSectionBackgroundImage.childImageSharp.fluid.src}),
+    url(${prop => prop.backgrounds.expertsSectionBackgroundImageRotated.childImageSharp.fluid.src});
 `
 
 export default Experts
