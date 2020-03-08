@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Enjoy a world of cultural flavors around you`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `FoodKlore gives you the best cuisine experience closer to you.`,
     author: `@foodklore`,
   },
   plugins: [
