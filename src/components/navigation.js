@@ -19,13 +19,7 @@ const Navigation = () => (
       <li>
         <a
           onClick={() =>
-            scrollTo({
-              top:
-                window.pageYOffset +
-                document.getElementById("howitworks").getBoundingClientRect()
-                  .top +
-                100,
-            })
+            scrollTo("#howitworks")
           }
         >
           How it works

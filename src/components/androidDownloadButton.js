@@ -1,10 +1,14 @@
 import React from "react"
 import AndroidDownloadImage from "src/images/AndroidBadgeBanner.svg"
 import styled from "styled-components"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const AndroidDownloadButton = props => (
   <a
-    href="https://example.com"
+    onClick={() => {
+      scrollTo("#subscribe");
+      document.getElementById("input_name").focus();
+    }}
     target="_blank"
     rel="noopener noreferrer"
     {...props}
@@ -16,7 +20,7 @@ const AndroidDownloadButton = props => (
 const ResponsiveImg = styled.img`
   width: 155px;
   height: 60px;
-
+  cursor: pointer;
   @media screen and (max-width: 699px) {
 
   }
