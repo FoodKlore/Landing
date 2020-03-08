@@ -1,13 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { DownloadApp } from "./global/"
-
-const scrollTo = selector => {
-  document.querySelector(selector).scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  })
-}
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Navigation = () => (
   <nav
