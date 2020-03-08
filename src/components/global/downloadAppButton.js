@@ -1,8 +1,12 @@
 import React from "react"
 import styled from "styled-components"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const DownloadApp = ({ width, height }) => (
-  <Button width={width} height={height}>
+  <Button width={width} height={height} onClick={() => {
+      scrollTo("#subscribe");
+      document.getElementById("input_name").focus();
+    }}>
     <p> Download App </p>
   </Button>
 )

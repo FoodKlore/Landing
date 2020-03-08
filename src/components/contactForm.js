@@ -17,7 +17,7 @@ const ContactForm = () => (
     }}
   >
     <TitleWrapper>
-      <P margin={0} fontsize={22} weight={600} lineheight={"normal"}>
+      <P margin={0} fontsize={"22px"} weight={600} lineheight={"normal"}>
         Come and experience <br /> the &nbsp;
         <span
           style={{
@@ -29,11 +29,11 @@ const ContactForm = () => (
         </span>
         on your palate
       </P>
-      <P className="temp_message" margin={0} fontsize={22} weight={600} lineheight={"normal"}>
-        Our application is under <br /> develop &nbsp;
+      <P className="temp_message" margin={0} fontsize={"14px"} weight={600} lineheight={"normal"}>
+        Our application is under <br /> contruction &nbsp;
         <span
           style={{
-            fontSize: "32px",
+            fontSize: "28px",
             fontWeight: "bold",
           }}
         >
@@ -44,7 +44,7 @@ const ContactForm = () => (
       </P>
     </TitleWrapper>
     <ContactFormComponent>
-      <InputText type="text" placeholder="Name" />
+      <InputText type="text" placeholder="Name" id="input_name"/>
       <InputText type="email" placeholder="Email" />
       <InputSubmit type="submit" value="Suscribe Now" />
     </ContactFormComponent>
