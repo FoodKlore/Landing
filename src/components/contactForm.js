@@ -5,6 +5,7 @@ import ExpertsSectionBackground from "./expertBackgroundImage"
 
 const ContactForm = () => (
   <ContactFormWrapper
+    id="subscribe"
     style={{
       backgroundImage: `url(${
         ExpertsSectionBackground().expertsSectionBackgroundImageRotated
@@ -28,6 +29,19 @@ const ContactForm = () => (
         </span>
         on your palate
       </P>
+      <P className="temp_message" margin={0} fontsize={22} weight={600} lineheight={"normal"}>
+        Our application is under <br /> develop &nbsp;
+        <span
+          style={{
+            fontSize: "32px",
+            fontWeight: "bold",
+          }}
+        >
+          subscribe <br />
+        </span>
+        to be one of the first to get notify.
+        {/* Nuestra aplication esta under develop, suscribete para ser uno de los primeros en enterarse. */}
+      </P>
     </TitleWrapper>
     <ContactFormComponent>
       <InputText type="text" placeholder="Name" />
@@ -44,6 +58,15 @@ const TitleWrapper = styled.div`
   align-items: center;
   margin: 0% 5% 0% 0%;
   flex: 1;
+  flex-direction: column;
+
+  .temp_message {
+    background-color: #ed5a6f;
+    margin-top: 35px;
+    width: 60%;
+    padding: 5%;
+  }
+
   @media only screen and (max-width: 699px) {
     display: flex;
     justify-content: flex-end;
@@ -53,7 +76,6 @@ const TitleWrapper = styled.div`
 
 const ContactFormWrapper = styled.section`
   width: 1322px;
-  height: 316px;
   padding: 5%;
   background-color: #e83b54;
   display: flex;
