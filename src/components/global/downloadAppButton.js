@@ -1,13 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import P from "./P"
 
 const DownloadApp = ({ width, height }) => (
   <Button width={width} height={height}>
-    <p> Download App </p>
+    <P> Download App </P>
   </Button>
 )
 
 const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   width: ${props => (props.width ? props.width : "196px")};
   height: ${props => (props.height ? props.height : "46px")};
@@ -16,7 +20,6 @@ const Button = styled.button`
   border: 0px;
   p {
     width: 100%;
-    height: 14px;
     font-size: 11px;
     font-weight: 600;
     font-stretch: normal;
@@ -25,6 +28,11 @@ const Button = styled.button`
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+    margin: 0;
+
+    @media screen and (max-width: 699px) {
+      font-size: 16px;
+    }
   }
 `
 

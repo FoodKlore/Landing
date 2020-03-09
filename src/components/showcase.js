@@ -112,7 +112,6 @@ const ShowCaseTitleWrapper = styled.div`
     }
 
     p {
-      font-size: 14px;
       text-align: center;
     }
   }
@@ -124,13 +123,6 @@ const ShowCaseItemWrapper = styled.div`
   align-items: center;
   @media only screen and (max-width: 699px) {
     flex-direction: column;
-    h3 {
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-    }
   }
 `
 

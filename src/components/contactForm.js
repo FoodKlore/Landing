@@ -66,7 +66,7 @@ const ContactFormWrapper = styled.section`
     max-width: 90%;
     padding: 0px 12px 0px 12px;
     height: 568px;
-    margin-top: -20vh;
+    margin-top: -10vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;

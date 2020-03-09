@@ -17,9 +17,12 @@ const PStyled = styled.p`
   margin: ${props => props.margin && props.margin};
 
   @media screen and (max-width: 699px) {
-    width: auto;
+    width: 100%;
     height: auto;
     text-align: ${props => props.mobile_align};
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
   }
 `
 

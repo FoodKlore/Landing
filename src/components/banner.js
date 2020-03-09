@@ -75,9 +75,9 @@ const MainSection = styled.section`
     background-image: none !important;
     overflow: hidden;
     background-color: #69bc8b;
-    /* padding: 0% 0% 5% 5%; */
+    padding: 0%;
     width: 100%;
-    height: 77vh;
+    height: 90vh;
     object-fit: contain;
   }
 `
@@ -91,7 +91,7 @@ const ResponsiveContainer = styled.div`
   @media only screen and (max-width: 699px) {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding-top: 10vh;
   }
@@ -128,7 +128,7 @@ const ResponsivePitch = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-
+    width: 90%;
     h1 {
       width: 100%;
       font-size: 32px;

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import SignUp1 from "src/images/SignUp1x.png"
 import SignUp2 from "src/images/SignUp2x.png"
 import SignUp3 from "src/images/SignUp3x.png"
+import { P } from "./global"
 
 const howItWorksData = [
   {
@@ -64,27 +65,14 @@ const HowItWorksItem = props => {
           {props.element.step}
         </span>
       </div>
-      <div>
-        <h4
-          style={{
-            fontSize: "13px",
-            fontWeight: "600",
-            color: "#3b3b3b",
-            marginBottom: "16px",
-          }}
-        >
+      <ResponsiveItemDetails>
+        <h4>
           {props.element.title}
         </h4>
-        <p
-          style={{
-            fontSize: "11px",
-            lineHeight: "14px",
-            color: "#3b3b3b",
-          }}
-        >
+        <P>
           {props.element.description}
-        </p>
-      </div>
+        </P>
+      </ResponsiveItemDetails>
     </button>
   )
 }
@@ -157,6 +145,17 @@ const HowItWorks = memo(() => {
     </HowItWorksSection>
   )
 })
+
+const ResponsiveItemDetails = styled.div`
+    font-size: 13px;
+    font-weight: 600;
+    color: #3b3b3b;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 699px) {
+      font-size: 26px;
+    }
+`
 
 const HowItWorksSection = styled.section`
 

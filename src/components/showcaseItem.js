@@ -40,6 +40,14 @@ const ItemWrapper = styled.section`
   padding: 0% 2.5%;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 699px) {
+    margin-top: 8vh;
+    h3 {
+      margin-top: -2vh;
+      margin-bottom: -2vh;
+    }
+  }
 `
 
 export default ShowCaseItem
