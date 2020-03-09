@@ -1,10 +1,14 @@
 import React from "react"
 import iOSDownloadImage from "src/images/iOsBadgeBanner.svg"
 import styled from 'styled-components'
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const IOSDownloadButton = props => (
   <a
-    href="https://example.com"
+    onClick={() => {
+      scrollTo("#subscribe");
+      document.getElementById("input_name").focus();
+    }}
     target="_blank"
     rel="noopener noreferrer"
     {...props}
@@ -16,7 +20,7 @@ const IOSDownloadButton = props => (
 const ResponsiveImg = styled.img`
   width: 125.1px;
   height: 41.8px;
-
+  cursor: pointer;
   @media screen and (max-width: 699px) {
     width: 148.1px;
     height: 45.8px;

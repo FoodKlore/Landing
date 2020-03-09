@@ -5,6 +5,7 @@ import ExpertsSectionBackground from "./expertBackgroundImage"
 
 const ContactForm = () => (
   <ContactFormWrapper
+    id="subscribe"
     style={{
       backgroundImage: `url(${
         ExpertsSectionBackground().expertsSectionBackgroundImageRotated
@@ -16,7 +17,7 @@ const ContactForm = () => (
     }}
   >
     <TitleWrapper>
-      <P margin={0} fontsize={22} weight={600} lineheight={"normal"}>
+      <P margin={0} fontsize={"22px"} weight={600} lineheight={"normal"}>
         Come and experience <br /> the &nbsp;
         <span
           style={{
@@ -28,9 +29,22 @@ const ContactForm = () => (
         </span>
         on your palate
       </P>
+      <P className="temp_message" margin={0} fontsize={"14px"} weight={600} lineheight={"normal"}>
+        Our application is under <br /> contruction &nbsp;
+        <span
+          style={{
+            fontSize: "28px",
+            fontWeight: "bold",
+          }}
+        >
+          subscribe <br />
+        </span>
+        to be one of the first to get notify.
+        {/* Nuestra aplication esta under develop, suscribete para ser uno de los primeros en enterarse. */}
+      </P>
     </TitleWrapper>
     <ContactFormComponent>
-      <InputText type="text" placeholder="Name" />
+      <InputText type="text" placeholder="Name" id="input_name"/>
       <InputText type="email" placeholder="Email" />
       <InputSubmit type="submit" value="Suscribe Now" />
     </ContactFormComponent>
@@ -44,16 +58,29 @@ const TitleWrapper = styled.div`
   align-items: center;
   margin: 0% 5% 0% 0%;
   flex: 1;
+  flex-direction: column;
+
+  .temp_message {
+    background-color: #ed5a6f;
+    margin-top: 35px;
+    width: 60%;
+    padding: 5%;
+  }
+
   @media only screen and (max-width: 699px) {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    flex: 1;
+
+    .temp_message {
+      width: auto;
+    }
   }
 `
 
 const ContactFormWrapper = styled.section`
   width: 1322px;
-  height: 316px;
   padding: 5%;
   background-color: #e83b54;
   display: flex;
@@ -66,7 +93,7 @@ const ContactFormWrapper = styled.section`
     max-width: 90%;
     padding: 0px 12px 0px 12px;
     height: 568px;
-    margin-top: -20vh;
+    margin-top: -10vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -84,6 +111,7 @@ const ContactFormComponent = styled.form`
   @media only screen and (max-width: 699px) {
     width: 100%;
     justify-content: center;
+    flex: 0.5;
     input {
       width: 100%;
     }

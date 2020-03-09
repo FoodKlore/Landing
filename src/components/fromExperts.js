@@ -16,7 +16,6 @@ const FromExperts = () => {
           <P
             fontsize="16px"
             color="#9292af"
-            className="description"
             mobile_align="center"
           >
             Prepare your palate to enjoy the true flavor of each of the world's
@@ -78,7 +77,7 @@ const FromExpertsSectionResponsive = styled.section`
     width: 100vw;
     padding: 10vw;
     margin-top: -150px;
-    margin-bottom: -20vh;
+    margin-bottom: -10vh;
   }
 `
 
@@ -103,18 +102,13 @@ const FromExpertsWrapperResponsive = styled.section`
   }
 `
 const FromExpertsDescription = styled.div`
-  .description {
-    margin-bottom: 5px;
-    padding-right: 65px;
-    @media screen and (max-width: 699px) {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-  }
 
   @media screen and (max-width: 699px) {
     width: 100%;
+
+    p {
+      margin-bottom: 2vh;
+    }
   }
 `
 

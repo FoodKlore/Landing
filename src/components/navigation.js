@@ -21,9 +21,7 @@ const Navigation = () => (
         </a>
       </li>
       <li>
-        <a href="#howitworks" onClick={() => scrollTo("#howitworks>div")}>
-          How it works
-        </a>
+        <a onClick={() => scrollTo("#howitworks")}>How it works</a>
       </li>
       <li>
         <a href="#foddies" onClick={() => scrollTo("#foddies")}>

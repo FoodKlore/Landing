@@ -7,13 +7,20 @@ import styled from "styled-components"
 const Header = ({ siteTitle }) => (
   <ResponsiveHeader>
     <div style={styles.navBar}>
-      <div style={{ width: `101px` }}>
+      <ResponsiveLogoWrapper style={{ width: `101px` }}>
         <FoodKloreLogo />
-      </div>
+      </ResponsiveLogoWrapper>
       <Navigation />
     </div>
   </ResponsiveHeader>
 )
+
+const ResponsiveLogoWrapper = styled.div`
+  width: 101px;
+  @media screen and (max-width: 699px) {
+    display: flex;
+  }
+`
 
 const ResponsiveHeader = styled.header`
   background: #69BC8B;
