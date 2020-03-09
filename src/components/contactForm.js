@@ -69,8 +69,13 @@ const TitleWrapper = styled.div`
 
   @media only screen and (max-width: 699px) {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    flex: 1;
+
+    .temp_message {
+      width: auto;
+    }
   }
 `
 
@@ -106,6 +111,7 @@ const ContactFormComponent = styled.form`
   @media only screen and (max-width: 699px) {
     width: 100%;
     justify-content: center;
+    flex: 0.5;
     input {
       width: 100%;
     }
