@@ -4,11 +4,15 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import P from "./P"
 
 const DownloadApp = ({ width, height }) => (
-  <Button width={width} height={height} onClick={() => {
-      scrollTo("#subscribe");
-      document.getElementById("input_name").focus();
-    }}>
-      <P> Download App </P>
+  <Button
+    width={width}
+    height={height}
+    onClick={() => {
+      scrollTo("#subscribe")
+      document.getElementById("input_name").focus()
+    }}
+  >
+    <P> Download App </P>
   </Button>
 )
 

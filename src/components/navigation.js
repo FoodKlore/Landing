@@ -11,22 +11,22 @@ const Navigation = () => (
   >
     <LinksWrapper>
       <li>
-        <a onClick={() => scrollTo("#home")}>Home</a>
-      </li>
-      <li>
-        <a onClick={() => scrollTo("#whatweoffer")}>What we offer</a>
-      </li>
-      <li>
-        <a
-          onClick={() =>
-            scrollTo("#howitworks")
-          }
-        >
-          How it works
+        <a href="#home" onClick={() => scrollTo("#home")}>
+          Home
         </a>
       </li>
       <li>
-        <a onClick={() => scrollTo("#foddies")}>Foddies</a>
+        <a href="#whatweoffer" onClick={() => scrollTo("#whatweoffer")}>
+          What we offer
+        </a>
+      </li>
+      <li>
+        <a onClick={() => scrollTo("#howitworks")}>How it works</a>
+      </li>
+      <li>
+        <a href="#foddies" onClick={() => scrollTo("#foddies")}>
+          Foddies
+        </a>
       </li>
       <li>
         <DownloadApp width="149px" height="42px" />
