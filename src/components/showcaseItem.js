@@ -28,6 +28,7 @@ const ShowCaseItem = ({ title, animationData, children }) => {
           display: "flex",
           justifyContent: "flex-end",
           alignItems: "flex-end",
+          margin: 0,
         }}
       />
       <H3> {title} </H3>

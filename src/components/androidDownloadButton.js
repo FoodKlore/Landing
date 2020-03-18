@@ -9,6 +9,10 @@ const AndroidDownloadButton = props => (
       scrollTo("#subscribe");
       document.getElementById("input_name").focus();
     }}
+    onKeyDown={() => {
+      scrollTo("#subscribe");
+      document.getElementById("input_name").focus();
+    }}
     target="_blank"
     rel="noopener noreferrer"
     {...props}

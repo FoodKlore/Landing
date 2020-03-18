@@ -28,9 +28,6 @@ const Navigation = () => (
           Foddies
         </a>
       </li>
-      <li>
-        <DownloadApp width="149px" height="42px" />
-      </li>
     </LinksWrapper>
   </nav>
 )

@@ -16,7 +16,6 @@ const H3 = styled.h3`
     font-size: 24px;
     height: auto;
     margin: 0;
-    text-align: center;
   }
 `
 

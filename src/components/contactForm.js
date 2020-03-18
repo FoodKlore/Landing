@@ -19,24 +19,14 @@ const ContactForm = () => (
     <TitleWrapper>
       <P margin={0} fontsize={"22px"} weight={600} lineheight={"normal"}>
         Come and experience <br /> the &nbsp;
-        <span
-          style={{
-            fontSize: "32px",
-            fontWeight: "bold",
-          }}
-        >
+        <span>
           taste of culture <br />
         </span>
         on your palate
       </P>
       <P className="temp_message" margin={0} fontsize={"14px"} weight={600} lineheight={"normal"}>
         Our application is under <br /> contruction &nbsp;
-        <span
-          style={{
-            fontSize: "28px",
-            fontWeight: "bold",
-          }}
-        >
+        <span>
           subscribe <br />
         </span>
         to be one of the first to get notify.

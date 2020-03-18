@@ -20,16 +20,6 @@ const Experts = () => (
   </ResponsiveExpertsSection>
 )
 
-const ResponsiveDownloadButtons = styled.div`
-  display: flex;
-  justify-content: center;
-  @media only screen and (max-width: 699px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-`
-
 const ResponsiveExpertsSection = styled.section`
   h1,
   p {

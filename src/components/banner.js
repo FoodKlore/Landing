@@ -38,16 +38,11 @@ const Banner = () => (
           Find that place who has the same test you were looking for and share
           the best of cuisines with your friends
         </P>
-        <section
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
+        <DownloadWrapper
         >
           <AndroidDownloadButton />
           <IOSDownloadButton />
-        </section>
+        </DownloadWrapper>
       </ResponsivePitch>
     </ResponsiveContainer>
   </MainSection>
@@ -82,12 +77,23 @@ const MainSection = styled.section`
   }
 `
 
+const DownloadWrapper = styled.section`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 4;
+`
+
 const ResponsiveContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+
   @media only screen and (max-width: 699px) {
     display: flex;
     flex-direction: row;
@@ -149,11 +155,6 @@ const ResponsivePitch = styled.div`
       font-size: 16px;
       line-height: 1.19;
       margin-bottom: 15px !important;
-    }
-
-    section {
-      flex-direction: column;
-      z-index: 4;
     }
   }
 `
