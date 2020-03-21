@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { DownloadApp } from "./global/"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Navigation = () => (

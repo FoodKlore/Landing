@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import BannerImage from "./bannerImage"
-import { H1, P } from "./global/"
-import AndroidDownloadButton from "./androidDownloadButton"
-import IOSDownloadButton from "./iOSDownloadButton"
+import { H1, P, DownloadApp } from "./global/"
 import bannerData from "../components/banner.json"
 import Lottie from "react-lottie"
 
@@ -38,11 +36,7 @@ const Banner = () => (
           Find that place who has the same test you were looking for and share
           the best of cuisines with your friends
         </P>
-        <DownloadWrapper
-        >
-          <AndroidDownloadButton />
-          <IOSDownloadButton />
-        </DownloadWrapper>
+        <DownloadApp/>
       </ResponsivePitch>
     </ResponsiveContainer>
   </MainSection>
@@ -75,16 +69,6 @@ const MainSection = styled.section`
     height: 90vh;
     object-fit: contain;
   }
-`
-
-const DownloadWrapper = styled.section`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    z-index: 4;
 `
 
 const ResponsiveContainer = styled.div`

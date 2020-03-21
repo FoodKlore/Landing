@@ -6,8 +6,6 @@ import shareYourExperiences from "../components/shareYourExperiences.json"
 import inYourArea from "../components/inYourArea.json"
 import newMoments from "../components/newMoments.json"
 import newCulturalFood from "../components/newCulturalFood.json"
-import AndroidDownloadButton from "./androidDownloadButton"
-import IOSDownloadButton from "./iOSDownloadButton"
 
 const ShowCase = () => (
     <ShowCaseContainer id="whatweoffer">

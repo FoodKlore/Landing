@@ -1,9 +1,7 @@
 import React from "react"
-import { H1, P } from "./global"
+import { H1, P, DownloadApp } from "./global"
 import BannerImage from "./bannerImage"
 import FoodKloreLogo from "./foodKloreLogo"
-import AndroidDownloadButton from "./androidDownloadButton"
-import IOSDownloadButton from "./iOSDownloadButton"
 import DownloadAppSectionImages from "./downloadAppSectionImages"
 import styled from "styled-components"
 
@@ -22,10 +20,7 @@ const DownloadAppSection = () => {
         </P>
       </ResponsiveTitleWrapper>
       <ResponsiveDownloadWrapper>
-        <DownloadButtonsWrapper>
-          <AndroidDownloadButton />
-          <IOSDownloadButton />
-        </DownloadButtonsWrapper>
+        <DownloadApp/>
         <DownloadAppSectionWrapper>
           <DownloadAppSectionImages />
         </DownloadAppSectionWrapper>
@@ -33,15 +28,6 @@ const DownloadAppSection = () => {
     </ResponsiveSection>
   )
 }
-
-const DownloadButtonsWrapper = styled.figure`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media only screen and (max-width: 699px) {
-    margin-top: 54.2px;
-  }
-`
 
 const DownloadAppSectionWrapper = styled.figure`
   display: flex;
