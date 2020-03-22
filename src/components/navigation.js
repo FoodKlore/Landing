@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import { DownloadApp } from "./global"
 
 const Navigation = () => (
   <nav
@@ -26,6 +27,9 @@ const Navigation = () => (
         <a href="#foddies" onClick={() => scrollTo("#foddies")}>
           Foddies
         </a>
+      </li>
+      <li>
+        <DownloadApp width="149px" height="42px" />
       </li>
     </LinksWrapper>
   </nav>

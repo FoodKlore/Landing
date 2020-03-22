@@ -17,14 +17,12 @@ const ContactForm = () => (
     }}
   >
     <TitleWrapper>
-      <P margin={0} fontsize={"22px"} weight={600} lineheight={"normal"}>
+      <P margin={0} weight={600}>
         Come and experience <br /> the &nbsp;
-        <span>
-          taste of culture <br />
-        </span>
+        taste of culture
         on your palate
       </P>
-      <P className="temp_message" margin={0} fontsize={"14px"} weight={600} lineheight={"normal"}>
+      <P className="temp_message">
         Our application is under <br /> contruction &nbsp;
         <span>
           subscribe <br />

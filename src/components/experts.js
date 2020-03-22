@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ExpertsSectionBackground from "./expertBackgroundImage"
-import { P, DownloadApp } from "./global/"
+import { P, DownloadAppButton } from "./global/"
 
 const Experts = () => (
   <ResponsiveExpertsSection>
@@ -11,7 +11,7 @@ const Experts = () => (
         and guarantee that our allies have the ability to make you experience
         flavors from other countries.
       </P>
-      <DownloadApp/>
+      <DownloadAppButton/>
     </ResponsiveBackground>
   </ResponsiveExpertsSection>
 )
@@ -29,7 +29,6 @@ const ResponsiveExpertsSection = styled.section`
     p {
       width: 100%;
       padding: 7vw;
-      font-size: 18px;
       font-weight: 600;
       line-height: 1.67;
       color: #ffffff;

@@ -5,7 +5,7 @@ const H2 = styled.h2`
   height: 41px;
   font-family: Montserrat;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: bolder;
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
@@ -14,8 +14,10 @@ const H2 = styled.h2`
   color: #e83b54;
 
   @media screen and (max-width: 699px) {
-    width: auto;
     height: auto;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.54;
   }
 `
 

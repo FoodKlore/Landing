@@ -11,7 +11,7 @@ const PStyled = styled.p`
   font-style: normal;
   line-height: ${props => (props.lineheight ? props.lineheight : 1.27)};
   letter-spacing: normal;
-  text-align: left;
+  text-align: ${props => (props.textalign ? props.textalign : "left")};;
   margin-top: ${props => (props.margintop ? props.margintop : "auto")};
   color: ${props => props.color};
   margin: ${props => props.margin && props.margin};

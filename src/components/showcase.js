@@ -78,6 +78,8 @@ const ShowCase = () => (
 )
 
 const ShowCaseContainer = styled.section`
+    display: flex;
+    flex-direction: column;
     padding: 5% 5% 5% 5%;
     @media only screen and (max-width: 699px) {
         margin-top: 5vh;
@@ -93,9 +95,6 @@ const ShowCaseTitleWrapper = styled.div`
 
     @media only screen and (max-width: 699px) {
         width: 100%;
-        h1 {
-            font-size: 24px;
-        }
     }
 `
 
@@ -103,6 +102,8 @@ const ShowCaseItemWrapper = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    width: 100%;
+
     @media only screen and (max-width: 699px) {
         flex-direction: column;
     }
