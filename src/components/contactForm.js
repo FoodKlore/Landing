@@ -1,9 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import { P } from "./global"
 import styled from "styled-components"
+import axios from "axios"
 import ExpertsSectionBackground from "./expertBackgroundImage"
 
-const ContactForm = () => (
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (event) => {
+    event.preventDefault();
+    axios.post('http://localhost:3000/subscribers', {
+      name,
+      email,
+      active: true
+    }).then(({data}) => {
+      setEmail('');
+      setName('');
+      console.log(`Thanks ${data.name} for subscribing, please check your email ${data.email}`);
+    }).catch(error => {
+      // 304, 500
+      console.log(error);
+    });
+  }
+
+  return(
   <ContactFormWrapper
     id="subscribe"
     style={{
@@ -43,13 +64,13 @@ const ContactForm = () => (
         {/* Nuestra aplication esta under develop, suscribete para ser uno de los primeros en enterarse. */}
       </P>
     </TitleWrapper>
-    <ContactFormComponent>
-      <InputText type="text" placeholder="Name" id="input_name"/>
-      <InputText type="email" placeholder="Email" />
+    <ContactFormComponent onSubmit={(event) => handleSubscribe(event)}>
+      <InputText value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" id="input_name"/>
+      <InputText value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
       <InputSubmit type="submit" value="Suscribe Now" />
     </ContactFormComponent>
   </ContactFormWrapper>
-)
+)}
 
 const TitleWrapper = styled.div`
   display: flex;
