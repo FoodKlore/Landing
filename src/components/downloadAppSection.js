@@ -1,9 +1,7 @@
 import React from "react"
-import { H1, P } from "./global"
+import { H1, P, DownloadAppButton } from "./global"
 import BannerImage from "./bannerImage"
 import FoodKloreLogo from "./foodKloreLogo"
-import AndroidDownloadButton from "./androidDownloadButton"
-import IOSDownloadButton from "./iOSDownloadButton"
 import DownloadAppSectionImages from "./downloadAppSectionImages"
 import styled from "styled-components"
 
@@ -22,10 +20,7 @@ const DownloadAppSection = () => {
         </P>
       </ResponsiveTitleWrapper>
       <ResponsiveDownloadWrapper>
-        <DownloadButtonsWrapper>
-          <AndroidDownloadButton />
-          <IOSDownloadButton />
-        </DownloadButtonsWrapper>
+        <DownloadAppButton/>
         <DownloadAppSectionWrapper>
           <DownloadAppSectionImages />
         </DownloadAppSectionWrapper>
@@ -33,15 +28,6 @@ const DownloadAppSection = () => {
     </ResponsiveSection>
   )
 }
-
-const DownloadButtonsWrapper = styled.figure`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media only screen and (max-width: 699px) {
-    margin-top: 54.2px;
-  }
-`
 
 const DownloadAppSectionWrapper = styled.figure`
   display: flex;
@@ -56,9 +42,17 @@ const DownloadAppSectionWrapper = styled.figure`
 `
 
 const ResponsiveDownloadWrapper = styled.div`
+
+  section {
+    justify-content: center;
+  }
   @media only screen and (max-width: 699px) {
     display: flex;
     flex-direction: column-reverse;
+
+    section {
+      justify-content: flex-start;
+    }
   }
 `
 
@@ -70,14 +64,12 @@ const ResponsiveTitleWrapper = styled.div`
   @media only screen and (max-width: 699px) {
     h1 {
       width: 100%;
-      font-size: 24px;
       font-weight: 600;
       text-align: center;
       color: #ffffff;
     }
 
     p {
-      font-size: 14px;
       text-align: center;
     }
   }

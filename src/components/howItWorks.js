@@ -4,7 +4,7 @@ import styled from "styled-components"
 import SignUp1 from "src/images/SignUp1x.png"
 import SignUp2 from "src/images/SignUp2x.png"
 import SignUp3 from "src/images/SignUp3x.png"
-import { P } from "./global"
+import { P, H2 } from "./global"
 
 const howItWorksData = [
   {
@@ -116,21 +116,15 @@ const HowItWorks = memo(() => {
             </ResponsiveFigure>
           </ResponsiveWrapper>
           <ResponsiveSteps>
-            <h2
-              style={{
-                fontWeight: "600",
-                fontSize: "30px",
-                marginBottom: "5px",
-              }}
-            >
+            <H2>
               How it works?
-            </h2>
-            <p
+            </H2>
+            <P
               id="how-it-works-label"
             >
               Using our application is very easy and practical, just follow
               these steps
-            </p>
+            </P>
             {howItWorksData.map(element => (
               <HowItWorksItem
                 key={element.id}
@@ -147,14 +141,9 @@ const HowItWorks = memo(() => {
 })
 
 const ResponsiveItemDetails = styled.div`
-    font-size: 13px;
     font-weight: 600;
     color: #3b3b3b;
     margin-bottom: 16px;
-
-    @media screen and (max-width: 699px) {
-      font-size: 26px;
-    }
 `
 
 const HowItWorksSection = styled.section`
@@ -166,9 +155,6 @@ const HowItWorksSection = styled.section`
   .active {
     background-color: #37496d;
     color: #fff;
-  }
-  h1,
-  p {
   }
 
   @media screen and (max-width: 699px) {
@@ -243,12 +229,9 @@ const ResponsiveSteps = styled.div`
     padding: 0;
 
     p#how-it-works-label {
-      text-align: center;
-      margin: 20px 0 35px 0;
+      margin: 0 0 35px 0;
     }
   }
-
-  font-size: 16px;
   line-height: 19px;
   color: #9292af;
 `

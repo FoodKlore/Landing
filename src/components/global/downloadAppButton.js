@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 import scrollTo from "gatsby-plugin-smoothscroll"
-import P from "./P"
+import P from './P'
 
 const DownloadApp = ({ width, height }) => (
   <Button
@@ -14,7 +14,7 @@ const DownloadApp = ({ width, height }) => (
   >
     <P> Download App </P>
   </Button>
-)
+);
 
 const Button = styled.button`
   display: flex;
@@ -27,7 +27,6 @@ const Button = styled.button`
   background-color: #e83b54;
   border: 0px;
   p {
-    width: 100%;
     font-size: 11px;
     font-weight: 600;
     font-stretch: normal;
@@ -37,8 +36,7 @@ const Button = styled.button`
     text-align: center;
     color: #ffffff;
     margin: 0;
-
-    @media screen and (max-width: 699px) {
+  @media screen and (max-width: 699px) {
       font-size: 16px;
     }
   }

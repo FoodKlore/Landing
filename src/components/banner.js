@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import BannerImage from "./bannerImage"
-import { H1, P } from "./global/"
-import AndroidDownloadButton from "./androidDownloadButton"
-import IOSDownloadButton from "./iOSDownloadButton"
+import { H1, H2, P, DownloadAppButton } from "./global/"
 import bannerData from "../components/banner.json"
 import Lottie from "react-lottie"
 
@@ -24,30 +22,14 @@ const Banner = () => (
       </ResponsiveLottie>
       <ResponsivePitch>
         <H1> Enjoy a world </H1>
-        <h2
-          style={{
-            fontSize: "32px",
-            margin: 0,
-            fontWeight: 600,
-            marginBottom: 10,
-          }}
-        >
+        <H2>
           culture flavors around you
-        </h2>
+        </H2>
         <P fontsize="15px" margintop="0px" width="50%">
           Find that place who has the same test you were looking for and share
           the best of cuisines with your friends
         </P>
-        <section
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
-        >
-          <AndroidDownloadButton />
-          <IOSDownloadButton />
-        </section>
+        <DownloadAppButton/>
       </ResponsivePitch>
     </ResponsiveContainer>
   </MainSection>
@@ -88,6 +70,7 @@ const ResponsiveContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+
   @media only screen and (max-width: 699px) {
     display: flex;
     flex-direction: row;
@@ -130,30 +113,17 @@ const ResponsivePitch = styled.div`
     flex-direction: column;
     width: 90%;
     h1 {
-      width: 100%;
-      font-size: 32px;
-      line-height: 1.16;
       margin-bottom: 15px !important;
     }
 
     h2 {
-      width: 100%;
-      font-size: 24px !important;
-      font-weight: 500;
-      line-height: 1.54;
       margin-bottom: 15px !important;
     }
 
     p {
       width: 100%;
-      font-size: 16px;
       line-height: 1.19;
       margin-bottom: 15px !important;
-    }
-
-    section {
-      flex-direction: column;
-      z-index: 4;
     }
   }
 `

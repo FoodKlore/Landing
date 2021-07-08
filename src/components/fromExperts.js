@@ -16,7 +16,6 @@ const FromExperts = () => {
           <P
             fontsize="16px"
             color="#9292af"
-            mobile_align="center"
           >
             Prepare your palate to enjoy the true flavor of each of the world's
             culture
@@ -24,7 +23,6 @@ const FromExperts = () => {
           <P
             className="description"
             fontsize="11px" color="#3b3b3b"
-            mobile_align="center"
           >
             We have the opinion of experts in gastronomy from different
             countries and thus authenticate the taste of the food you want to
@@ -35,25 +33,21 @@ const FromExperts = () => {
         <ResponsiveAvatars backgroundexperts={BackgroundExperts}
         >
           <Avatars />
-          <p
-            style={{
-              textAlign: "center",
-              color: "#e83b54",
-              fontSize: "12px",
-              width: "100%",
-              marginBottom: "0",
-            }}
+          <P
+            color="#e83b54"
+            fontsize="12px"
+            textalign="center"
           >
             <a
               style={{
                 color: "inherit",
                 textDecoration: "none",
               }}
-              href="https://example.com"
+              href="#"
             >
               View all rates
             </a>
-          </p>
+          </P>
         </ResponsiveAvatars>
       </FromExpertsWrapperResponsive>
     </FromExpertsSectionResponsive>

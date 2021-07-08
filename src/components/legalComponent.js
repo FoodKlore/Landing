@@ -18,13 +18,13 @@ const LegalComponent = () => (
     </P>
     <SocialMediaWrapper>
       <figure>
-        <img src={facebookSvg} />
+        <img src={facebookSvg} alt="Follow us on Facebook"/>
       </figure>
       <figure>
-        <img src={twitterSvg} />
+        <img src={twitterSvg} alt="Follow us on Twitter"/>
       </figure>
       <figure>
-        <img src={instagramSvg} />
+        <img src={instagramSvg} alt="Follow us on Instagram"/>
       </figure>
     </SocialMediaWrapper>
   </LegalWrapper>
